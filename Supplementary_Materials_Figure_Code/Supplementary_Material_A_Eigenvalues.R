@@ -101,8 +101,6 @@ Eigenvalues_Plot <- ggplot(data.frame(negative_counts), aes(x = negative_counts)
   labs(x = "Number of Negative Eigenvalues", y = "Count")
 
 
-setwd("C:/Users/smith/OneDrive/Desktop/UAZ Research/Density_Evolution/Patch_Dyanmics_Model/Figures") 
-
 ggsave("Jaciban_Eigenvalues_Consumer_Resource_Plot.svg", plot = Eigenvalues_Plot, device = "svg", width = 6, height = 6) # save to working directory
 
 

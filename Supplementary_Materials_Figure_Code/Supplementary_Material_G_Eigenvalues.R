@@ -8,6 +8,7 @@
 # Load Packages 
 library(lhs)
 library(MASS)
+library(ggplot2)
 
 ##########################
 ###### Functions #########
@@ -101,6 +102,5 @@ Eigenvalues_Plot <- ggplot(data.frame(negative_counts), aes(x = negative_counts)
 
 Eigenvalues_Plot
 
-setwd("C:/Users/smith/OneDrive/Desktop/UAZ Research/Density_Evolution/Patch_Dyanmics_Model/Figures") 
-ggsave("Jaciban_Eigenvalues_Invasion_C1.svg", plot = Eigenvalues_Plot, device = "svg", width = 6, height = 6) # save to working directory
+ggsave("Jaciban_Eigenvalues_Invasion_G1.svg", plot = Eigenvalues_Plot, device = "svg", width = 6, height = 6) # save to working directory
 

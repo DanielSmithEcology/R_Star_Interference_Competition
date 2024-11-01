@@ -7,6 +7,7 @@
 # Load packages (install if necessary)
 library(lhs)
 library(ggplot2)
+library(MASS)
 
 
 ###########################
@@ -153,8 +154,6 @@ Priority_effects_figure <- ggplot(data, aes(x = Outcome, y = Count, fill = Outco
 
 
 Priority_effects_figure # print plot
-
-setwd("C:/Users/smith/OneDrive/Desktop/UAZ Research/Density_Evolution/Patch_Dyanmics_Model/Figures") 
 
 ggsave("Prioity_effects_Plot.svg", plot = Plot, device = "svg", width = 6, height = 6) # save to working directory
 
