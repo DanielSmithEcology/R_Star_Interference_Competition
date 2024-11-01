@@ -1,0 +1,2025 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     72456,       2017]
+NotebookOptionsPosition[     70989,       1985]
+NotebookOutlinePosition[     71534,       2004]
+CellTagsIndexPosition[     71491,       2001]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{" ", 
+  RowBox[{
+   RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], ";", 
+   RowBox[{
+    RowBox[{"CurrentValue", "[", 
+     RowBox[{
+      RowBox[{"EvaluationNotebook", "[", "]"}], ",", "Background"}], "]"}], 
+    "=", "White"}], ";"}]}]], "Input",
+ FontFamily->"Times New Roman",
+ FontSize->12,
+ FontColor->GrayLevel[0],
+ CellLabel->"In[18]:=",ExpressionUUID->"12418b54-dc5b-45a4-97b4-81a9f28538db"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Section E: Derivation of Equilibrium Resource Level \
+", "Section",
+ FontFamily->"Times New Roman",
+ FontSize->28,
+ FontWeight->"Normal",
+ FontColor->GrayLevel[0]]], "Subtitle",
+ CellChangeTimes->{{3.938993504782714*^9, 3.938993530857941*^9}, {
+  3.9394510229721055`*^9, 3.9394510596287966`*^9}},
+ FontFamily->"Times New Roman",
+ FontSize->12,ExpressionUUID->"09dcceb0-1fd3-4036-a2b6-7c16b02db033"],
+
+Cell[TextData[{
+ "In the main text, we show two different values of the equilibrium resource \
+abundance when consumer ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       StyleBox["i", "TI"], TraditionalForm], "errors" -> {}, "input" -> "i", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "cb46adb4-a221-4854-9ac0-871338fe8c63"],
+ " interferes  ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       SubsuperscriptBox[
+        StyleBox["R", "TI"], 
+        RowBox[{
+          StyleBox["i", "TI"], ",", 
+          StyleBox["I", "TI"]}], "*"], TraditionalForm], "errors" -> {}, 
+     "input" -> "R_{i,I}^*", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "c9169c57-7587-446f-9a71-32e991b41df1"],
+ " (Equation (4) and the expression below it). Here, we show where they \
+originate from."
+}], "Text",
+ CellChangeTimes->{{3.9038821880748186`*^9, 3.9038822485088177`*^9}, {
+   3.9038822836538815`*^9, 3.903882289121467*^9}, {3.9038823218552275`*^9, 
+   3.9038823927413673`*^9}, {3.90388256807399*^9, 3.9038826091424*^9}, {
+   3.9038832825749464`*^9, 3.9038832947594023`*^9}, {3.903976288827117*^9, 
+   3.9039763086284313`*^9}, {3.903976371996146*^9, 3.903976372934553*^9}, {
+   3.9039788482635813`*^9, 3.903978871055814*^9}, {3.9047170063236275`*^9, 
+   3.9047170075110054`*^9}, {3.9047176507747293`*^9, 
+   3.9047176821249075`*^9}, {3.9047180460286427`*^9, 
+   3.9047180538270836`*^9}, {3.904718913911914*^9, 3.904718950436078*^9}, {
+   3.9047392591146564`*^9, 3.90473927572536*^9}, {3.904739611870432*^9, 
+   3.904739613597108*^9}, {3.9047795392628098`*^9, 3.9047795667304373`*^9}, {
+   3.938554076626066*^9, 3.938554080576475*^9}, {3.938554122786006*^9, 
+   3.9385541545646544`*^9}, {3.9386059223526*^9, 3.938605925187743*^9}, {
+   3.9386091006008477`*^9, 3.938609103545779*^9}, {3.938815272599736*^9, 
+   3.938815272759243*^9}, {3.9389931239119577`*^9, 3.938993141842346*^9}, {
+   3.9389948127941008`*^9, 3.9389948422537403`*^9}, 3.939451085960105*^9, {
+   3.93945146386022*^9, 3.9394514659480624`*^9}},
+ FontFamily->"Times New Roman",
+ FontSize->12,
+ FontColor->GrayLevel[
+  0],ExpressionUUID->"e05cd974-f0a2-4d49-bd2b-46facbb531f5"],
+
+Cell[TextData[{
+ "We consider the system of ODEs describing the consumer-resource dynamics of \
+type ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       StyleBox["i", "TI"], TraditionalForm], "errors" -> {}, "input" -> "i", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "86a522a5-85a2-4342-b601-2c6ae9d5bea0"],
+ ". The system is given by:\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         FractionBox[
+          RowBox[{
+            StyleBox["d", "TI"], 
+            SubscriptBox[
+             StyleBox["S", "TI"], 
+             StyleBox["i", "TI"]]}], 
+          RowBox[{
+            StyleBox["d", "TI"], 
+            StyleBox["t", "TI"]}]], "\[LongEqual]", 
+         RowBox[{
+           FractionBox["1", 
+            SubscriptBox["\[Tau]", 
+             StyleBox["i", "TI"]]], 
+           RowBox[{"(", 
+             RowBox[{"1", "+", 
+               SubscriptBox[
+                StyleBox["e", "TI"], 
+                StyleBox["i", "TI"]]}], ")"}], 
+           SubscriptBox[
+            StyleBox["h", "TI"], 
+            StyleBox["i", "TI"]]}], " ", "+", 
+         RowBox[{
+           SubscriptBox[
+            RowBox[{"2", "\[Beta]"}], 
+            StyleBox["i", "TI"]], 
+           SubscriptBox[
+            StyleBox["C", "TI"], 
+            RowBox[{
+              StyleBox["i", "TI"], 
+              StyleBox["i", "TI"]}]]}], " ", 
+         SubscriptBox[
+          RowBox[{"- ", 
+            StyleBox["m", "TI"]}], 
+          StyleBox["i", "TI"]], 
+         SubscriptBox[
+          StyleBox["S", "TI"], 
+          StyleBox["i", "TI"]], "-", 
+         SubscriptBox[
+          RowBox[{
+            SubscriptBox[
+             StyleBox["a", "TI"], 
+             StyleBox["i", "TI"]], 
+            StyleBox["S", "TI"]}], 
+          StyleBox["i", "TI"]], 
+         SubscriptBox[
+          StyleBox["i", "TI"], 
+          StyleBox["i", "TI"]], "-", 
+         SubscriptBox[
+          StyleBox["a", "TI"], 
+          StyleBox["i", "TI"]], 
+         SubscriptBox[
+          StyleBox["S", "TI"], 
+          StyleBox["i", "TI"]], 
+         StyleBox["R", "TI"], "\n", 
+         FractionBox[
+          RowBox[{
+            StyleBox["d", "TI"], 
+            SubscriptBox[
+             StyleBox["H", "TI"], 
+             StyleBox["i", "TI"]]}], 
+          RowBox[{
+            StyleBox["d", "TI"], 
+            StyleBox["t", "TI"]}]], "\[LongEqual]", 
+         SubscriptBox[
+          StyleBox["a", "TI"], 
+          StyleBox["i", "TI"]], 
+         SubscriptBox[
+          StyleBox["S", "TI"], 
+          StyleBox["i", "TI"]], 
+         StyleBox["R", "TI"], "+", 
+         RowBox[{"(", 
+           RowBox[{
+             SubscriptBox[
+              RowBox[{"2", "\[Beta]"}], 
+              StyleBox["i", "TI"]], "+", 
+             SubscriptBox[
+              RowBox[{"2", 
+                StyleBox["m", "TI"]}], 
+              StyleBox["i", "TI"]]}], ")"}], 
+         SubscriptBox[
+          StyleBox["C", "TI"], 
+          RowBox[{
+            StyleBox["i", "TI"], 
+            StyleBox["i", "TI"]}]], "-", 
+         SubscriptBox[
+          StyleBox["m", "TI"], 
+          StyleBox["i", "TI"]], 
+         SubscriptBox[
+          StyleBox["i", "TI"], 
+          StyleBox["i", "TI"]], "-", 
+         SubscriptBox[
+          StyleBox["H", "TI"], 
+          StyleBox["i", "TI"]], "/", 
+         SubscriptBox["\[Tau]", 
+          StyleBox["i", "TI"]], " ", "-", 
+         SubscriptBox[
+          RowBox[{
+            SubscriptBox[
+             StyleBox["a", "TI"], 
+             StyleBox["i", "TI"]], 
+            StyleBox["S", "TI"]}], 
+          StyleBox["i", "TI"]], 
+         SubscriptBox[
+          StyleBox["H", "TI"], 
+          StyleBox["i", "TI"]], 
+         "                                                                ", 
+         RowBox[{"(", 
+           RowBox[{"1", 
+             StyleBox["E", "TI"]}], ")"}], "\\[NewLine]", 
+         FractionBox[
+          RowBox[{
+            StyleBox["d", "TI"], 
+            SubscriptBox[
+             StyleBox["C", "TI"], 
+             RowBox[{
+               StyleBox["i", "TI"], 
+               StyleBox["i", "TI"]}]]}], 
+          RowBox[{
+            StyleBox["d", "TI"], 
+            StyleBox["t", "TI"]}]], "\[LongEqual]", 
+         SubscriptBox[
+          RowBox[{
+            SubscriptBox[
+             StyleBox["a", "TI"], 
+             StyleBox["i", "TI"]], 
+            StyleBox["S", "TI"]}], 
+          StyleBox["i", "TI"]], 
+         SubscriptBox[
+          StyleBox["i", "TI"], 
+          StyleBox["i", "TI"]], "-", 
+         RowBox[{"(", 
+           RowBox[{
+             SubscriptBox[
+              RowBox[{"2", "\[Beta]"}], 
+              StyleBox["i", "TI"]], "+", 
+             SubscriptBox[
+              RowBox[{"2", 
+                StyleBox["m", "TI"]}], 
+              StyleBox["i", "TI"]]}], ")"}], 
+         SubscriptBox[
+          StyleBox["C", "TI"], 
+          RowBox[{
+            StyleBox["i", "TI"], 
+            StyleBox["i", "TI"]}]], "\\[NewLine]", 
+         FractionBox[
+          RowBox[{
+            StyleBox["d", "TI"], 
+            StyleBox["R", "TI"]}], 
+          RowBox[{
+            StyleBox["d", "TI"], 
+            StyleBox["t", "TI"]}]], "\[LongEqual] ", 
+         StyleBox["f", "TI"], 
+         RowBox[{"(", 
+           StyleBox["R", "TI"], ")"}], "-", 
+         SubscriptBox[
+          StyleBox["a", "TI"], 
+          StyleBox["i", "TI"]], 
+         SubscriptBox[
+          StyleBox["S", "TI"], 
+          StyleBox["i", "TI"]], 
+         StyleBox["R", "TI"], "   ", "+", 
+         SubscriptBox[
+          StyleBox["m", "TI"], 
+          StyleBox["i", "TI"]], 
+         SubscriptBox[
+          StyleBox["H", "TI"], 
+          StyleBox["i", "TI"]]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "\\frac{dS_i}{dt}={\\frac{1}{\\tau_i}\\left(1+e_i \\right)h_i}\\below\\ \
++{{2\\beta}_iC _{ii}}\\below\\ {-\\ m}_iS _i-{a_iS}_ii _i-a_iS _iR \\\\\n\
+\\frac{dH_i}{dt}=a_iS _iR+\\left({2\\beta}_i+{2m}_i \\right)C_{ii}-m_ii \
+_i-H_i/\\tau_i\\ -{a_iS}_iH _i  \\qquad \\qquad \\qquad \\qquad \\qquad \
+\\qquad \\qquad \\qquad \\qquad \\qquad \\qquad \\qquad  \\qquad  \\qquad \
+\\qquad  \\qquad (1E) \\\\\n\\frac{dC_{ii}}{dt}={a_iS}_ii \
+_i-\\left({2\\beta}_i+{2m}_i \\right)C_{ii} \\\\\n\\frac{dR}{dt}=\\ f\\left(R \
+\\right)-a_iS _iR\\ \\ \\ +m_iH_i", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "97b0a7fb-daad-4376-b88c-d840a828e9fb"],
+ "\n\nwhere ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         StyleBox["f", "TI"], 
+         RowBox[{"(", 
+           StyleBox["R", "TI"], ")"}], "\[LongEqual]", 
+         StyleBox["r", "TI"], 
+         RowBox[{"(", 
+           RowBox[{
+             StyleBox["K", "TI"], "-", 
+             StyleBox["R", "TI"]}], ")"}]}], TraditionalForm], "errors" -> {},
+      "input" -> "f\\left(R\\right)=r\\left(K-R\\right)", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "a7d3d714-5a54-4b42-9067-6763534e7f09"],
+ ". W\n\n ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       SubsuperscriptBox[
+        StyleBox["R", "TI"], 
+        RowBox[{
+          StyleBox["i", "TI"], ",", 
+          StyleBox["I", "TI"]}], "*"], TraditionalForm], "errors" -> {}, 
+     "input" -> "R_{i,I}^*", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "857d4311-b7c7-4075-a52c-ce76681b0572"],
+ " is derived by solving the non-trivial equilibrium for ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{"1", 
+         StyleBox["E", "TI"]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "1E", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "d3c01ea3-e087-4660-9b2e-13eacd5cc7a5"],
+ ": "
+}], "Text",
+ CellChangeTimes->{{3.9038830785739374`*^9, 3.90388309580976*^9}, {
+  3.9039788808992357`*^9, 3.903978898222731*^9}, {3.9039789341193995`*^9, 
+  3.9039789356064634`*^9}, {3.9039851374065886`*^9, 3.903985139155754*^9}, {
+  3.904727264989087*^9, 3.904727275305911*^9}, {3.938554122796948*^9, 
+  3.9385541321994295`*^9}, {3.938569553563739*^9, 3.9385695577715836`*^9}, {
+  3.9386060262889524`*^9, 3.938606036951655*^9}, {3.938624147161378*^9, 
+  3.938624150606722*^9}, {3.938994886078822*^9, 3.9389948922753716`*^9}, {
+  3.9389949332210474`*^9, 3.9389949370016375`*^9}, {3.9389951066231084`*^9, 
+  3.9389951382593427`*^9}, {3.9394511244808626`*^9, 3.939451136326908*^9}, {
+  3.939451487525201*^9, 3.939451566145793*^9}, {3.9394522345369987`*^9, 
+  3.939452236218093*^9}},
+ FontFamily->"Times New Roman",
+ FontSize->12,
+ FontColor->GrayLevel[
+  0],ExpressionUUID->"7f3559e4-812d-48aa-9505-9ac26bf52b05"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"(*", 
+    RowBox[{"Solve", " ", "for", " ", "the", " ", "equilibria"}], "*)"}],
+   FontSize->14], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ConResEquilHawk", " ", "=", " ", 
+     RowBox[{"Simplify", "[", 
+      RowBox[{"Solve", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", 
+             SubscriptBox["a", "i"]}], "*", "R", "*", 
+            SubscriptBox["S", "i"]}], " ", "+", 
+           RowBox[{"(", 
+            RowBox[{
+             SubscriptBox["H", "i"], "/", 
+             SubscriptBox["\[Tau]", "i"]}], ")"}], "+", 
+           RowBox[{"(", 
+            RowBox[{
+             SubscriptBox["e", "i"], "*", 
+             RowBox[{
+              SubscriptBox["H", "i"], "/", 
+              SubscriptBox["\[Tau]", "i"]}]}], ")"}], "-", 
+           RowBox[{
+            SubscriptBox["m", "i"], "*", 
+            SubscriptBox["S", "i"]}], "+", 
+           RowBox[{"2", 
+            SubscriptBox["C", "ii"], "*", 
+            SubscriptBox["\[Beta]", "i"]}], "-", 
+           RowBox[{
+            SubscriptBox["a", "i"], "*", 
+            SubscriptBox["H", "i"], "*", 
+            SubscriptBox["S", "i"]}]}], " ", "==", "0"}], " ", "&&", 
+         "\[IndentingNewLine]", "\t\t                             ", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            SubscriptBox["a", "i"], "*", "R", "*", 
+            SubscriptBox["S", "i"]}], "-", 
+           RowBox[{"(", 
+            RowBox[{
+             SubscriptBox["H", "i"], "/", 
+             SubscriptBox["\[Tau]", "i"]}], ")"}], "-", 
+           RowBox[{
+            SubscriptBox["m", "i"], "*", 
+            SubscriptBox["H", "i"]}], "+", 
+           RowBox[{"2", 
+            SubscriptBox["C", "ii"], "*", 
+            SubscriptBox["\[Beta]", "i"]}], "+", 
+           RowBox[{"2", 
+            SubscriptBox["m", "i"], "*", 
+            SubscriptBox["C", "ii"]}], "+", 
+           RowBox[{"2", "*", 
+            SubscriptBox["m", "Ci"], "*", 
+            SubscriptBox["C", "ii"]}], "-", 
+           RowBox[{
+            SubscriptBox["a", "i"], "*", 
+            SubscriptBox["H", "i"], "*", 
+            SubscriptBox["S", "i"]}]}], "  ", "==", "0"}], "&&", 
+         "\[IndentingNewLine]", "\t\t                              ", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            SubscriptBox["a", "i"], "*", 
+            SubscriptBox["H", "i"], "*", 
+            SubscriptBox["S", "i"]}], "-", 
+           RowBox[{"2", "*", 
+            SubscriptBox["\[Beta]", "i"], "*", 
+            SubscriptBox["C", "ii"]}], " ", "-", 
+           RowBox[{"2", "*", 
+            SubscriptBox["m", "i"], "*", 
+            SubscriptBox["C", "ii"]}], "-", 
+           RowBox[{"2", "*", 
+            SubscriptBox["m", "Ci"], "*", 
+            SubscriptBox["C", "ii"]}]}], " ", "==", "0"}], "&&", 
+         "\[IndentingNewLine]", 
+         "                                                               ", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"r", "*", 
+            RowBox[{"(", 
+             RowBox[{"K", "-", "R"}], ")"}]}], "-", 
+           RowBox[{
+            SubscriptBox["a", "i"], "*", "R", "*", 
+            SubscriptBox["S", "i"]}], "+", 
+           RowBox[{
+            SubscriptBox["m", "i"], "*", 
+            SubscriptBox["H", "i"]}]}], "==", "0"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          SubscriptBox["S", "i"], ",", 
+          SubscriptBox["H", "i"], ",", 
+          SubscriptBox["C", "ii"], ",", "R"}], "}"}]}], "]"}], "]"}]}], ";"}],
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   StyleBox[
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{"Print", " ", "the", " ", "non"}], "-", 
+      RowBox[{"trivial", " ", "equilibria"}]}], "*)"}],
+    FontSize->14], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Part", "[", 
+     RowBox[{"ConResEquilHawk", ",", "2"}], "]"}], "//", 
+    "TraditionalForm"}]}]}]], "Input",
+ CellChangeTimes->{{3.9038830150920067`*^9, 3.9038830681607103`*^9}, {
+   3.9038833018936987`*^9, 3.9038833500016017`*^9}, {3.9038839999328423`*^9, 
+   3.903884032933552*^9}, {3.9038980271201153`*^9, 3.9038980781340666`*^9}, {
+   3.9039656405389147`*^9, 3.9039656659553423`*^9}, {3.9039763486336613`*^9, 
+   3.9039763486377945`*^9}, {3.9039768615033197`*^9, 3.903976953962031*^9}, {
+   3.9039789007364345`*^9, 3.9039789581547074`*^9}, {3.903979094911618*^9, 
+   3.9039791026234007`*^9}, {3.903979202889767*^9, 3.9039792044378366`*^9}, {
+   3.9039795450224447`*^9, 3.9039796130745554`*^9}, {3.903979749558668*^9, 
+   3.9039798467727013`*^9}, {3.903979934354854*^9, 3.903979934370844*^9}, {
+   3.9039837640231447`*^9, 3.903983809840866*^9}, {3.9039838855893617`*^9, 
+   3.9039838975934563`*^9}, {3.9039847361232805`*^9, 
+   3.9039847471698465`*^9}, {3.9385541100392437`*^9, 
+   3.9385541228928595`*^9}, {3.938554161090146*^9, 3.938554182237566*^9}, {
+   3.9386060651502733`*^9, 3.9386061158505554`*^9}, {3.938995157996025*^9, 
+   3.938995252916182*^9}, {3.9389953328840437`*^9, 3.938995333311887*^9}, {
+   3.9389953994861345`*^9, 3.9389954290520096`*^9}, {3.938995469812502*^9, 
+   3.9389954728960323`*^9}, 3.938995859694257*^9, 3.939029830687723*^9, {
+   3.939452216691855*^9, 3.9394522957528243`*^9}, {3.9394523600761724`*^9, 
+   3.939452492358884*^9}},
+ FontFamily->"Times New Roman",
+ FontSize->12,
+ FontColor->GrayLevel[0],
+ CellLabel->"In[9]:=",ExpressionUUID->"fcea22b8-f2a6-4a44-aa8d-1c7c8c3b87ec"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["S", "i"], "\[Rule]", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"r", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          SubscriptBox["m", "Ci"], "+", 
+          SubscriptBox["\[Beta]", "i"], "+", 
+          SubscriptBox["m", "i"]}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SubscriptBox["a", "i"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"K", " ", 
+              SubscriptBox["m", "i"], " ", 
+              SubscriptBox["\[Tau]", "i"]}], "-", 
+             RowBox[{"K", " ", 
+              SubscriptBox["e", "i"]}]}], ")"}]}], "+", 
+          RowBox[{
+           SubscriptBox["m", "i"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              SubscriptBox["m", "i"], " ", 
+              SubscriptBox["\[Tau]", "i"]}], "+", "1"}], ")"}]}]}], ")"}]}], 
+       RowBox[{
+        SubscriptBox["a", "i"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SubscriptBox["m", "Ci"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"K", " ", "r", " ", 
+              SubscriptBox["a", "i"], " ", 
+              SubscriptBox["\[Tau]", "i"]}], "+", 
+             SubscriptBox["m", "i"]}], ")"}]}], "+", 
+          RowBox[{
+           SubscriptBox["m", "i"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"K", " ", "r", " ", 
+              SubscriptBox["a", "i"], " ", 
+              SubscriptBox["\[Tau]", "i"]}], "+", 
+             SubscriptBox["\[Beta]", "i"], "+", 
+             SubscriptBox["m", "i"]}], ")"}]}]}], ")"}]}]]}]}], ",", 
+    RowBox[{
+     SubscriptBox["H", "i"], "\[Rule]", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"r", " ", 
+        SubscriptBox["\[Tau]", "i"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          SubscriptBox["m", "Ci"], "+", 
+          SubscriptBox["\[Beta]", "i"], "+", 
+          SubscriptBox["m", "i"]}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SubscriptBox["a", "i"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"K", " ", 
+              SubscriptBox["m", "i"], " ", 
+              SubscriptBox["\[Tau]", "i"]}], "-", 
+             RowBox[{"K", " ", 
+              SubscriptBox["e", "i"]}]}], ")"}]}], "+", 
+          RowBox[{
+           SubscriptBox["m", "i"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              SubscriptBox["m", "i"], " ", 
+              SubscriptBox["\[Tau]", "i"]}], "+", "1"}], ")"}]}]}], ")"}]}], 
+       RowBox[{
+        SubscriptBox["a", "i"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SubscriptBox["e", "i"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             SubscriptBox["m", "Ci"], "+", 
+             SubscriptBox["\[Beta]", "i"], "+", 
+             SubscriptBox["m", "i"]}], ")"}]}], "+", 
+          RowBox[{
+           SubscriptBox["\[Tau]", "i"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              SubscriptBox["m", "Ci"], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 SubscriptBox["m", "i"], " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"r", " ", 
+                    SubscriptBox["\[Tau]", "i"]}], "-", "1"}], ")"}]}], "+", 
+                "r"}], ")"}]}], "+", 
+             RowBox[{
+              SubscriptBox["m", "i"], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", 
+                 SubscriptBox["\[Beta]", "i"]}], "+", 
+                RowBox[{
+                 SubscriptBox["m", "i"], " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"r", " ", 
+                    SubscriptBox["\[Tau]", "i"]}], "-", "1"}], ")"}]}], "+", 
+                "r"}], ")"}]}]}], ")"}]}]}], ")"}]}]]}]}], ",", 
+    RowBox[{
+     SubscriptBox["C", "ii"], "\[Rule]", 
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["r", "2"], " ", 
+       SubscriptBox["\[Tau]", "i"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         SubscriptBox["m", "Ci"], "+", 
+         SubscriptBox["\[Beta]", "i"], "+", 
+         SubscriptBox["m", "i"]}], ")"}], " ", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SubscriptBox["a", "i"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"K", " ", 
+              SubscriptBox["m", "i"], " ", 
+              SubscriptBox["\[Tau]", "i"]}], "-", 
+             RowBox[{"K", " ", 
+              SubscriptBox["e", "i"]}]}], ")"}]}], "+", 
+          RowBox[{
+           SubscriptBox["m", "i"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              SubscriptBox["m", "i"], " ", 
+              SubscriptBox["\[Tau]", "i"]}], "+", "1"}], ")"}]}]}], ")"}], 
+        "2"]}], 
+      RowBox[{"2", " ", 
+       SubscriptBox["a", "i"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SubscriptBox["e", "i"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            SubscriptBox["m", "Ci"], "+", 
+            SubscriptBox["\[Beta]", "i"], "+", 
+            SubscriptBox["m", "i"]}], ")"}]}], "+", 
+         RowBox[{
+          SubscriptBox["\[Tau]", "i"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             SubscriptBox["m", "Ci"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                SubscriptBox["m", "i"], " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"r", " ", 
+                   SubscriptBox["\[Tau]", "i"]}], "-", "1"}], ")"}]}], "+", 
+               "r"}], ")"}]}], "+", 
+            RowBox[{
+             SubscriptBox["m", "i"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", 
+                SubscriptBox["\[Beta]", "i"]}], "+", 
+               RowBox[{
+                SubscriptBox["m", "i"], " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"r", " ", 
+                   SubscriptBox["\[Tau]", "i"]}], "-", "1"}], ")"}]}], "+", 
+               "r"}], ")"}]}]}], ")"}]}]}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SubscriptBox["m", "Ci"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"K", " ", "r", " ", 
+             SubscriptBox["a", "i"], " ", 
+             SubscriptBox["\[Tau]", "i"]}], "+", 
+            SubscriptBox["m", "i"]}], ")"}]}], "+", 
+         RowBox[{
+          SubscriptBox["m", "i"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"K", " ", "r", " ", 
+             SubscriptBox["a", "i"], " ", 
+             SubscriptBox["\[Tau]", "i"]}], "+", 
+            SubscriptBox["\[Beta]", "i"], "+", 
+            SubscriptBox["m", "i"]}], ")"}]}]}], ")"}]}]]}], ",", 
+    RowBox[{"R", "\[Rule]", 
+     FractionBox[
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SubscriptBox["m", "i"], " ", 
+          SubscriptBox["\[Tau]", "i"]}], "+", "1"}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SubscriptBox["m", "Ci"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"K", " ", "r", " ", 
+             SubscriptBox["a", "i"], " ", 
+             SubscriptBox["\[Tau]", "i"]}], "+", 
+            SubscriptBox["m", "i"]}], ")"}]}], "+", 
+         RowBox[{
+          SubscriptBox["m", "i"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"K", " ", "r", " ", 
+             SubscriptBox["a", "i"], " ", 
+             SubscriptBox["\[Tau]", "i"]}], "+", 
+            SubscriptBox["\[Beta]", "i"], "+", 
+            SubscriptBox["m", "i"]}], ")"}]}]}], ")"}]}], 
+      RowBox[{
+       SubscriptBox["a", "i"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SubscriptBox["e", "i"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            SubscriptBox["m", "Ci"], "+", 
+            SubscriptBox["\[Beta]", "i"], "+", 
+            SubscriptBox["m", "i"]}], ")"}]}], "+", 
+         RowBox[{
+          SubscriptBox["\[Tau]", "i"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             SubscriptBox["m", "Ci"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                SubscriptBox["m", "i"], " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"r", " ", 
+                   SubscriptBox["\[Tau]", "i"]}], "-", "1"}], ")"}]}], "+", 
+               "r"}], ")"}]}], "+", 
+            RowBox[{
+             SubscriptBox["m", "i"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"-", 
+                SubscriptBox["\[Beta]", "i"]}], "+", 
+               RowBox[{
+                SubscriptBox["m", "i"], " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"r", " ", 
+                   SubscriptBox["\[Tau]", "i"]}], "-", "1"}], ")"}]}], "+", 
+               "r"}], ")"}]}]}], ")"}]}]}], ")"}]}]]}]}], "}"}], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{3.939452498792805*^9},
+ CellLabel->
+  "Out[10]//TraditionalForm=",ExpressionUUID->"735599c5-8ddb-49d0-97eb-\
+b4c645259b1d"]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["That is, the equilibria are: \n\n",
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal"],
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox[
+          StyleBox["S", "TI"], 
+          StyleBox["i", "TI"], "*"], "\[LongEqual]", "-", 
+         FractionBox[
+          RowBox[{
+            StyleBox["r", "TI"], 
+            RowBox[{"(", 
+              RowBox[{
+                SubscriptBox[
+                 StyleBox["m", "TI"], "Ci"], "+", 
+                SubscriptBox["\[Beta]", 
+                 StyleBox["i", "TI"]], "+", 
+                SubscriptBox[
+                 StyleBox["m", "TI"], 
+                 StyleBox["i", "TI"]]}], ")"}], 
+            RowBox[{"(", 
+              RowBox[{
+                SubscriptBox[
+                 StyleBox["a", "TI"], 
+                 StyleBox["i", "TI"]], 
+                RowBox[{"(", 
+                  RowBox[{
+                    StyleBox["K", "TI"], 
+                    SubscriptBox[
+                    StyleBox["m", "TI"], 
+                    StyleBox["i", "TI"]], 
+                    SubscriptBox["\[Tau]", 
+                    StyleBox["i", "TI"]], "-", 
+                    StyleBox["K", "TI"], 
+                    SubscriptBox[
+                    StyleBox["e", "TI"], 
+                    StyleBox["i", "TI"]]}], ")"}], "+", 
+                SubscriptBox[
+                 StyleBox["m", "TI"], 
+                 StyleBox["i", "TI"]], 
+                RowBox[{"(", 
+                  RowBox[{
+                    SubscriptBox[
+                    StyleBox["m", "TI"], 
+                    StyleBox["i", "TI"]], 
+                    SubscriptBox["\[Tau]", 
+                    StyleBox["i", "TI"]], "+", "1"}], ")"}]}], ")"}]}], 
+          RowBox[{
+            SubscriptBox[
+             StyleBox["a", "TI"], 
+             StyleBox["i", "TI"]], "(", 
+            RowBox[{
+              SubscriptBox[
+               StyleBox["m", "TI"], "Ci"], 
+              RowBox[{"(", 
+                RowBox[{
+                  StyleBox["K", "TI"], 
+                  StyleBox["r", "TI"], 
+                  SubscriptBox[
+                   StyleBox["a", "TI"], 
+                   StyleBox["i", "TI"]], 
+                  SubscriptBox["\[Tau]", 
+                   StyleBox["i", "TI"]], "+", 
+                  SubscriptBox[
+                   StyleBox["m", "TI"], 
+                   StyleBox["i", "TI"]]}], ")"}], "+", 
+              SubscriptBox[
+               StyleBox["m", "TI"], 
+               StyleBox["i", "TI"]], 
+              RowBox[{"(", 
+                RowBox[{
+                  StyleBox["K", "TI"], 
+                  StyleBox["r", "TI"], 
+                  SubscriptBox[
+                   StyleBox["a", "TI"], 
+                   StyleBox["i", "TI"]], 
+                  SubscriptBox["\[Tau]", 
+                   StyleBox["i", "TI"]], "+", 
+                  SubscriptBox["\[Beta]", 
+                   StyleBox["i", "TI"]], "+", 
+                  SubscriptBox[
+                   StyleBox["m", "TI"], 
+                   StyleBox["i", "TI"]]}], ")"}]}], ")"}]], "\n", 
+         SubsuperscriptBox[
+          StyleBox["H", "TI"], 
+          StyleBox["i", "TI"], "*"], "\[LongEqual]", "-", 
+         FractionBox[
+          RowBox[{
+            StyleBox["r", "TI"], 
+            SubscriptBox["\[Tau]", 
+             StyleBox["i", "TI"]], 
+            RowBox[{"(", 
+              RowBox[{
+                SubscriptBox[
+                 StyleBox["m", "TI"], "Ci"], "+", 
+                SubscriptBox["\[Beta]", 
+                 StyleBox["i", "TI"]], "+", 
+                SubscriptBox[
+                 StyleBox["m", "TI"], 
+                 StyleBox["i", "TI"]]}], ")"}], 
+            RowBox[{"(", 
+              RowBox[{
+                SubscriptBox[
+                 StyleBox["a", "TI"], 
+                 StyleBox["i", "TI"]], 
+                RowBox[{"(", 
+                  RowBox[{
+                    StyleBox["K", "TI"], 
+                    SubscriptBox[
+                    StyleBox["m", "TI"], 
+                    StyleBox["i", "TI"]], 
+                    SubscriptBox["\[Tau]", 
+                    StyleBox["i", "TI"]], "-", 
+                    StyleBox["K", "TI"], 
+                    SubscriptBox[
+                    StyleBox["e", "TI"], 
+                    StyleBox["i", "TI"]]}], ")"}], "+", 
+                SubscriptBox[
+                 StyleBox["m", "TI"], 
+                 StyleBox["i", "TI"]], 
+                RowBox[{"(", 
+                  RowBox[{
+                    SubscriptBox[
+                    StyleBox["m", "TI"], 
+                    StyleBox["i", "TI"]], 
+                    SubscriptBox["\[Tau]", 
+                    StyleBox["i", "TI"]], "+", "1"}], ")"}]}], ")"}]}], 
+          RowBox[{
+            SubscriptBox[
+             StyleBox["a", "TI"], 
+             StyleBox["i", "TI"]], "(", 
+            RowBox[{
+              SubscriptBox[
+               StyleBox["e", "TI"], 
+               StyleBox["i", "TI"]], 
+              RowBox[{"(", 
+                RowBox[{
+                  SubscriptBox[
+                   StyleBox["m", "TI"], "Ci"], "+", 
+                  SubscriptBox["\[Beta]", 
+                   StyleBox["i", "TI"]], "+", 
+                  SubscriptBox[
+                   StyleBox["m", "TI"], 
+                   StyleBox["i", "TI"]]}], ")"}], "+", 
+              SubscriptBox["\[Tau]", 
+               StyleBox["i", "TI"]], 
+              RowBox[{"(", 
+                RowBox[{
+                  SubscriptBox[
+                   StyleBox["m", "TI"], "Ci"], 
+                  RowBox[{"(", 
+                    RowBox[{
+                    SubscriptBox[
+                    StyleBox["m", "TI"], 
+                    StyleBox["i", "TI"]], 
+                    RowBox[{"(", 
+                    RowBox[{
+                    StyleBox["r", "TI"], 
+                    SubscriptBox["\[Tau]", 
+                    StyleBox["i", "TI"]], "-", "1"}], ")"}], "+", 
+                    StyleBox["r", "TI"]}], ")"}], "+", 
+                  SubscriptBox[
+                   StyleBox["m", "TI"], 
+                   StyleBox["i", "TI"]], 
+                  RowBox[{"(", 
+                    RowBox[{"-", 
+                    SubscriptBox["\[Beta]", 
+                    StyleBox["i", "TI"]], "+", 
+                    SubscriptBox[
+                    StyleBox["m", "TI"], 
+                    StyleBox["i", "TI"]], 
+                    RowBox[{"(", 
+                    RowBox[{
+                    StyleBox["r", "TI"], 
+                    SubscriptBox["\[Tau]", 
+                    StyleBox["i", "TI"]], "-", "1"}], ")"}], "+", 
+                    StyleBox["r", "TI"]}], ")"}]}], ")"}]}], ")"}]], 
+         "\\[NewLine]", 
+         SubsuperscriptBox[
+          StyleBox["C", "TI"], "ii", "*"], "\[LongEqual]", 
+         FractionBox[
+          RowBox[{
+            SuperscriptBox[
+             StyleBox["r", "TI"], "2"], 
+            SubscriptBox["\[Tau]", 
+             StyleBox["i", "TI"]], 
+            RowBox[{"(", 
+              RowBox[{
+                SubscriptBox[
+                 StyleBox["m", "TI"], "Ci"], "+", 
+                SubscriptBox["\[Beta]", 
+                 StyleBox["i", "TI"]], "+", 
+                SubscriptBox[
+                 StyleBox["m", "TI"], 
+                 StyleBox["i", "TI"]]}], ")"}], 
+            RowBox[{"(", 
+              RowBox[{
+                SubscriptBox[
+                 StyleBox["a", "TI"], 
+                 StyleBox["i", "TI"]], 
+                RowBox[{"(", 
+                  RowBox[{
+                    StyleBox["K", "TI"], 
+                    SubscriptBox[
+                    StyleBox["m", "TI"], 
+                    StyleBox["i", "TI"]], 
+                    SubscriptBox["\[Tau]", 
+                    StyleBox["i", "TI"]], "-", 
+                    StyleBox["K", "TI"], 
+                    SubscriptBox[
+                    StyleBox["e", "TI"], 
+                    StyleBox["i", "TI"]]}], ")"}], "+", 
+                SubscriptBox[
+                 StyleBox["m", "TI"], 
+                 StyleBox["i", "TI"]], 
+                RowBox[{"(", 
+                  RowBox[{
+                    SubscriptBox[
+                    StyleBox["m", "TI"], 
+                    StyleBox["i", "TI"]], 
+                    SubscriptBox["\[Tau]", 
+                    StyleBox["i", "TI"]], "+", "1"}], ")"}]}], ")"}], 
+            SuperscriptBox["\[Null]", "2"]}], 
+          RowBox[{"2", 
+            SubscriptBox[
+             StyleBox["a", "TI"], 
+             StyleBox["i", "TI"]], 
+            RowBox[{"(", 
+              RowBox[{
+                SubscriptBox[
+                 StyleBox["e", "TI"], 
+                 StyleBox["i", "TI"]], 
+                RowBox[{"(", 
+                  RowBox[{
+                    SubscriptBox[
+                    StyleBox["m", "TI"], "Ci"], "+", 
+                    SubscriptBox["\[Beta]", 
+                    StyleBox["i", "TI"]], "+", 
+                    SubscriptBox[
+                    StyleBox["m", "TI"], 
+                    StyleBox["i", "TI"]]}], ")"}], "+", 
+                SubscriptBox["\[Tau]", 
+                 StyleBox["i", "TI"]], 
+                RowBox[{"(", 
+                  RowBox[{
+                    SubscriptBox[
+                    StyleBox["m", "TI"], "Ci"], 
+                    RowBox[{"(", 
+                    RowBox[{
+                    SubscriptBox[
+                    StyleBox["m", "TI"], 
+                    StyleBox["i", "TI"]], 
+                    RowBox[{"(", 
+                    RowBox[{
+                    StyleBox["r", "TI"], 
+                    SubscriptBox["\[Tau]", 
+                    StyleBox["i", "TI"]], "-", "1"}], ")"}], "+", 
+                    StyleBox["r", "TI"]}], ")"}], "+", 
+                    SubscriptBox[
+                    StyleBox["m", "TI"], 
+                    StyleBox["i", "TI"]], 
+                    RowBox[{"(", 
+                    RowBox[{"-", 
+                    SubscriptBox["\[Beta]", 
+                    StyleBox["i", "TI"]], "+", 
+                    SubscriptBox[
+                    StyleBox["m", "TI"], 
+                    StyleBox["i", "TI"]], 
+                    RowBox[{"(", 
+                    RowBox[{
+                    StyleBox["r", "TI"], 
+                    SubscriptBox["\[Tau]", 
+                    StyleBox["i", "TI"]], "-", "1"}], ")"}], "+", 
+                    StyleBox["r", "TI"]}], ")"}]}], ")"}]}], ")"}], 
+            RowBox[{"(", 
+              RowBox[{
+                SubscriptBox[
+                 StyleBox["m", "TI"], "Ci"], 
+                RowBox[{"(", 
+                  RowBox[{
+                    StyleBox["K", "TI"], 
+                    StyleBox["r", "TI"], 
+                    SubscriptBox[
+                    StyleBox["a", "TI"], 
+                    StyleBox["i", "TI"]], 
+                    SubscriptBox["\[Tau]", 
+                    StyleBox["i", "TI"]], "+", 
+                    SubscriptBox[
+                    StyleBox["m", "TI"], 
+                    StyleBox["i", "TI"]]}], ")"}], "+", 
+                SubscriptBox[
+                 StyleBox["m", "TI"], 
+                 StyleBox["i", "TI"]], 
+                RowBox[{"(", 
+                  RowBox[{
+                    StyleBox["K", "TI"], 
+                    StyleBox["r", "TI"], 
+                    SubscriptBox[
+                    StyleBox["a", "TI"], 
+                    StyleBox["i", "TI"]], 
+                    SubscriptBox["\[Tau]", 
+                    StyleBox["i", "TI"]], "+", 
+                    SubscriptBox["\[Beta]", 
+                    StyleBox["i", "TI"]], "+", 
+                    SubscriptBox[
+                    StyleBox["m", "TI"], 
+                    StyleBox["i", "TI"]]}], ")"}]}], ")"}]}]], "\\[NewLine]", 
+         SubsuperscriptBox[
+          StyleBox["R", "TI"], 
+          RowBox[{
+            StyleBox["i", "TI"], ",", 
+            StyleBox["I", "TI"]}], "*"], "\[LongEqual]", 
+         FractionBox[
+          RowBox[{
+            RowBox[{"(", 
+              RowBox[{
+                SubscriptBox[
+                 StyleBox["m", "TI"], 
+                 StyleBox["i", "TI"]], 
+                SubscriptBox["\[Tau]", 
+                 StyleBox["i", "TI"]], "+", "1"}], ")"}], "(", 
+            RowBox[{
+              SubscriptBox[
+               StyleBox["m", "TI"], "Ci"], 
+              RowBox[{"(", 
+                RowBox[{
+                  StyleBox["K", "TI"], 
+                  StyleBox["r", "TI"], 
+                  SubscriptBox[
+                   StyleBox["a", "TI"], 
+                   StyleBox["i", "TI"]], 
+                  SubscriptBox["\[Tau]", 
+                   StyleBox["i", "TI"]], "+", 
+                  SubscriptBox[
+                   StyleBox["m", "TI"], 
+                   StyleBox["i", "TI"]]}], ")"}], "+", 
+              SubscriptBox[
+               StyleBox["m", "TI"], 
+               StyleBox["i", "TI"]], 
+              RowBox[{"(", 
+                RowBox[{
+                  StyleBox["K", "TI"], 
+                  StyleBox["r", "TI"], 
+                  SubscriptBox[
+                   StyleBox["a", "TI"], 
+                   StyleBox["i", "TI"]], 
+                  SubscriptBox["\[Tau]", 
+                   StyleBox["i", "TI"]], "+", 
+                  SubscriptBox["\[Beta]", 
+                   StyleBox["i", "TI"]], "+", 
+                  SubscriptBox[
+                   StyleBox["m", "TI"], 
+                   StyleBox["i", "TI"]]}], ")"}]}], ")"}], 
+          RowBox[{
+            SubscriptBox[
+             StyleBox["a", "TI"], 
+             StyleBox["i", "TI"]], "(", 
+            RowBox[{
+              SubscriptBox[
+               StyleBox["e", "TI"], 
+               StyleBox["i", "TI"]], 
+              RowBox[{"(", 
+                RowBox[{
+                  SubscriptBox[
+                   StyleBox["m", "TI"], "Ci"], "+", 
+                  SubscriptBox["\[Beta]", 
+                   StyleBox["i", "TI"]], "+", 
+                  SubscriptBox[
+                   StyleBox["m", "TI"], 
+                   StyleBox["i", "TI"]]}], ")"}], "+", 
+              SubscriptBox["\[Tau]", 
+               StyleBox["i", "TI"]], 
+              RowBox[{"(", 
+                RowBox[{
+                  SubscriptBox[
+                   StyleBox["m", "TI"], "Ci"], 
+                  RowBox[{"(", 
+                    RowBox[{
+                    SubscriptBox[
+                    StyleBox["m", "TI"], 
+                    StyleBox["i", "TI"]], 
+                    RowBox[{"(", 
+                    RowBox[{
+                    StyleBox["r", "TI"], 
+                    SubscriptBox["\[Tau]", 
+                    StyleBox["i", "TI"]], "-", "1"}], ")"}], "+", 
+                    StyleBox["r", "TI"]}], ")"}], "+", 
+                  SubscriptBox[
+                   StyleBox["m", "TI"], 
+                   StyleBox["i", "TI"]], 
+                  RowBox[{"(", 
+                    RowBox[{"-", 
+                    SubscriptBox["\[Beta]", 
+                    StyleBox["i", "TI"]], "+", 
+                    SubscriptBox[
+                    StyleBox["m", "TI"], 
+                    StyleBox["i", "TI"]], 
+                    RowBox[{"(", 
+                    RowBox[{
+                    StyleBox["r", "TI"], 
+                    SubscriptBox["\[Tau]", 
+                    StyleBox["i", "TI"]], "-", "1"}], ")"}], "+", 
+                    StyleBox["r", "TI"]}], ")"}]}], ")"}]}], ")"}]]}], 
+       TraditionalForm], "errors" -> {}, "input" -> 
+     "S^*_i = -\\frac{r \\left(m_{\\text{Ci}}+\\beta _i+m_i\\right) \
+\\left(a_i \\left(K m_i \\tau _i-K e_i\\right)+m_i \\left(m_i \\tau \
+_i+1\\right)\\right)}{a_i \\left(m_{\\text{Ci}} \\left(K r a_i \\tau \
+_i+m_i\\right)+m_i \\left(K r a_i \\tau _i+\\beta _i+m_i\\right)\\right)} \
+\\\\ H^*_i = -\\frac{r \\tau _i \\left(m_{\\text{Ci}}+\\beta _i+m_i\\right) \
+\\left(a_i \\left(K m_i \\tau _i-K e_i\\right)+m_i \\left(m_i \\tau \
+_i+1\\right)\\right)}{a_i \\left(e_i \\left(m_{\\text{Ci}}+\\beta \
+_i+m_i\\right)+\\tau _i \\left(m_{\\text{Ci}} \\left(m_i \\left(r \\tau \
+_i-1\\right)+r\\right)+m_i \\left(-\\beta _i+m_i \\left(r \\tau \
+_i-1\\right)+r\\right)\\right)\\right)} \\\\ C^*_{\\text{ii}} = \\frac{r^2 \
+\\tau _i \\left(m_{\\text{Ci}}+\\beta _i+m_i\\right) \\left(a_i \\left(K m_i \
+\\tau _i-K e_i\\right)+m_i \\left(m_i \\tau _i+1\\right)\\right){}^2}{2 a_i \
+\\left(e_i \\left(m_{\\text{Ci}}+\\beta _i+m_i\\right)+\\tau _i \
+\\left(m_{\\text{Ci}} \\left(m_i \\left(r \\tau _i-1\\right)+r\\right)+m_i \
+\\left(-\\beta _i+m_i \\left(r \\tau _i-1\\right)+r\\right)\\right)\\right) \
+\\left(m_{\\text{Ci}} \\left(K r a_i \\tau _i+m_i\\right)+m_i \\left(K r a_i \
+\\tau _i+\\beta _i+m_i\\right)\\right)} \\\\ R^*_{i,I}} = \\frac{\\left(m_i \
+\\tau _i+1\\right) \\left(m_{\\text{Ci}} \\left(K r a_i \\tau \
+_i+m_i\\right)+m_i \\left(K r a_i \\tau _i+\\beta _i+m_i\\right)\\right)}{a_i \
+\\left(e_i \\left(m_{\\text{Ci}}+\\beta _i+m_i\\right)+\\tau _i \
+\\left(m_{\\text{Ci}} \\left(m_i \\left(r \\tau _i-1\\right)+r\\right)+m_i \
+\\left(-\\beta _i+m_i \\left(r \\tau _i-1\\right)+r\\right)\\right)\\right)}",
+      "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],
+  FontFamily->"Times New Roman",
+  FontSize->12,ExpressionUUID->"9a01f989-2e3b-4178-9f3c-8a330a638272"],
+ StyleBox["\n\n",
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal"],
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       SubsuperscriptBox[
+        StyleBox["R", "TI"], 
+        RowBox[{
+          StyleBox["i", "TI"], ",", 
+          StyleBox["I", "TI"]}], "*"], TraditionalForm], "errors" -> {}, 
+     "input" -> "R_{i,I}^*", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal",ExpressionUUID->"8720e0b3-ff02-4b6f-8035-f4fc54e94d2a"],
+ StyleBox[" can be rearranged and the term ",
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal"],
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox[
+          StyleBox["R", "TI"], 
+          StyleBox["i", "TI"], "*"], "\[LongEqual]", 
+         FractionBox[
+          RowBox[{
+            SubscriptBox[
+             StyleBox["m", "TI"], 
+             StyleBox["i", "TI"]], "(", 
+            RowBox[{
+              SubscriptBox[
+               StyleBox["m", "TI"], 
+               StyleBox["i", "TI"]], 
+              SubscriptBox["\[Tau]", 
+               StyleBox["i", "TI"]], "+", "1"}], ")"}], 
+          RowBox[{
+            SubscriptBox[
+             StyleBox["a", "TI"], 
+             StyleBox["i", "TI"]], "(", 
+            RowBox[{
+              SubscriptBox[
+               StyleBox["e", "TI"], 
+               StyleBox["i", "TI"]], "-", 
+              SubscriptBox[
+               StyleBox["m", "TI"], 
+               StyleBox["i", "TI"]], 
+              SubscriptBox["\[Tau]", 
+               StyleBox["i", "TI"]]}], ")"}]]}], TraditionalForm], 
+     "errors" -> {}, "input" -> 
+     "R^*_i=\\frac{m_i\\left(m_i\\tau _i+1\\right)}{a_i\\left(e_i-m_i\\tau _i\
+\\right)}", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal",ExpressionUUID->"3ab29486-d19e-46be-8c06-9508cee4db48"],
+ StyleBox[" can be substituted in several places. This yields: \n\n",
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal"],
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox[
+          StyleBox["R", "TI"], 
+          RowBox[{
+            StyleBox["i", "TI"], ",", 
+            StyleBox["I", "TI"]}], "*"], "\[LongEqual]", 
+         SubsuperscriptBox[
+          StyleBox["R", "TI"], 
+          RowBox[{
+            StyleBox["i", "TI"], ",", 
+            StyleBox["E", "TI"]}], "*"], 
+         FractionBox[
+          RowBox[{"1", "+", 
+            StyleBox["K", "TI"], 
+            FractionBox[
+             RowBox[{" ", 
+               StyleBox["r", "TI"], " ", 
+               SubscriptBox[
+                StyleBox["a", "TI"], 
+                StyleBox["i", "TI"]], 
+               SubscriptBox["\[Tau]", 
+                StyleBox["i", "TI"]]}], 
+             RowBox[{
+               SubscriptBox["\[Beta]", 
+                StyleBox["i", "TI"]], "+", 
+               SubscriptBox[
+                StyleBox["m", "TI"], 
+                StyleBox["i", "TI"]], "+", 
+               SubscriptBox[
+                StyleBox["m", "TI"], 
+                RowBox[{
+                  StyleBox["C", "TI"], 
+                  StyleBox["i", "TI"]}]]}]], 
+            RowBox[{"(", 
+              RowBox[{"1", "+", 
+                FractionBox[
+                 SubscriptBox[
+                  StyleBox["m", "TI"], 
+                  RowBox[{
+                    StyleBox["C", "TI"], 
+                    StyleBox["i", "TI"]}]], 
+                 SubscriptBox[
+                  StyleBox["m", "TI"], 
+                  StyleBox["i", "TI"]]]}], ")"}]}], 
+          RowBox[{"1", "+", 
+            SubsuperscriptBox[
+             StyleBox["R", "TI"], 
+             RowBox[{
+               StyleBox["i", "TI"], ",", 
+               StyleBox["E", "TI"]}], "*"], 
+            FractionBox[
+             RowBox[{" ", 
+               StyleBox["r", "TI"], " ", 
+               SubscriptBox[
+                StyleBox["a", "TI"], 
+                StyleBox["i", "TI"]], 
+               SubscriptBox["\[Tau]", 
+                StyleBox["i", "TI"]]}], 
+             RowBox[{
+               SubscriptBox["\[Beta]", 
+                StyleBox["i", "TI"]], "+", 
+               SubscriptBox[
+                StyleBox["m", "TI"], 
+                StyleBox["i", "TI"]], "+", 
+               SubscriptBox[
+                StyleBox["m", "TI"], 
+                RowBox[{
+                  StyleBox["C", "TI"], 
+                  StyleBox["i", "TI"]}]]}]], 
+            RowBox[{"(", 
+              RowBox[{"1", "+", 
+                FractionBox[
+                 SubscriptBox[
+                  StyleBox["m", "TI"], 
+                  RowBox[{
+                    StyleBox["C", "TI"], 
+                    StyleBox["i", "TI"]}]], 
+                 SubscriptBox[
+                  StyleBox["m", "TI"], 
+                  StyleBox["i", "TI"]]]}], ")"}]}]]}], TraditionalForm], 
+     "errors" -> {}, "input" -> 
+     "R_{i,I}^\\ast=R_{i,E}^\\ast \\frac{1+ K\\frac{\\ r\\ a_i \
+\\tau_i}{\\beta_i+m_i+m_{Ci}} (1+\\frac{m_{Ci}}{ m_i} )}{1+ R_{i,E}^\\ast \
+\\frac{\\ r\\ a_i \\tau_i}{\\beta_i+m_i+m_{Ci}} (1+\\frac{m_{Ci}}{ m_i} )}", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "ffa475a2-58b4-4015-aa5c-d2eb55703e2c"],
+ "\n\n",
+ StyleBox["which is the same as Equation (4) from the main text. \n\n\
+Secondly, in the main text we consider the case in which contests that are \
+very fast (large ",
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal"],
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       SubscriptBox["\[Beta]", 
+        StyleBox["i", "TI"]], TraditionalForm], "errors" -> {}, "input" -> 
+     "\\beta_i", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "924e7b27-94c3-4910-9b76-3701cc89b00f"],
+ StyleBox[") but very deadly (large ",
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal"],
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       SubscriptBox[
+        StyleBox["m", "TI"], 
+        RowBox[{
+          StyleBox["C", "TI"], 
+          StyleBox["i", "TI"]}]], TraditionalForm], "errors" -> {}, "input" -> 
+     "m_{Ci}", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "eca1b02c-440c-44ac-8a29-640c3aa60192"],
+ StyleBox[", recalling ",
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal"],
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       SubscriptBox[
+        StyleBox["m", "TI"], 
+        RowBox[{
+          StyleBox["C", "TI"], 
+          StyleBox["i", "TI"]}]], TraditionalForm], "errors" -> {}, "input" -> 
+     "m_{Ci}", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "98fe2f68-b474-4357-9a5c-c5c7995de2f3"],
+ StyleBox[" is the increase in mortality due to contests). This can be \
+achieved by making the substitution of parameters ",
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal"],
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox["\[Beta]", 
+          StyleBox["i", "TI"]], "\[Rule]", 
+         StyleBox["x", "TI"], 
+         SubscriptBox["\[Beta]", 
+          StyleBox["i", "TI"]], ",", 
+         SubscriptBox[
+          StyleBox["m", "TI"], 
+          RowBox[{
+            StyleBox["C", "TI"], 
+            StyleBox["i", "TI"]}]], "\[Rule]", 
+         StyleBox["x", "TI"], 
+         SubscriptBox[
+          StyleBox["m", "TI"], 
+          RowBox[{
+            StyleBox["C", "TI"], 
+            StyleBox["i", "TI"]}]]}], TraditionalForm], "errors" -> {}, 
+     "input" -> 
+     "\\beta_i \\rightarrow x \\beta_i ,m_{Ci} \\rightarrow x m_{Ci}", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal",ExpressionUUID->"efcc3a8d-c67c-48e9-bd33-d02e52df8634"],
+ " ",
+ StyleBox[" and taking the limit of ",
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal"],
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       SubsuperscriptBox[
+        StyleBox["R", "TI"], 
+        RowBox[{
+          StyleBox["i", "TI"], ",", 
+          StyleBox["I", "TI"]}], "*"], TraditionalForm], "errors" -> {}, 
+     "input" -> "R_{i,I}^*", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],
+  FontFamily->"Times New Roman",
+  FontSize->12,ExpressionUUID->"1ee89a47-43b5-4aa3-8e4e-b52405a73c91"],
+ StyleBox[" as ",
+  FontFamily->"Times New Roman",
+  FontSize->12],
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         StyleBox["x", "TI"], "\[Rule]", "\[Infinity]"}], TraditionalForm], 
+     "errors" -> {}, "input" -> "x \\rightarrow \\infty", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],
+  FontFamily->"Times New Roman",
+  FontSize->12,ExpressionUUID->"04a08d3e-6fcd-40f2-8300-077b8dfcf6c1"],
+ ". We do so below:  "
+}], "Text",
+ CellChangeTimes->{{3.939451638153906*^9, 3.939451662929695*^9}, {
+   3.9394528221811867`*^9, 3.9394528824818597`*^9}, {3.9394529240830727`*^9, 
+   3.939452969929392*^9}, 3.939453050623531*^9, {3.939453447936962*^9, 
+   3.9394534839730864`*^9}, {3.9394535592609143`*^9, 3.93945360478218*^9}, {
+   3.9394536563214846`*^9, 3.939453661588708*^9}, {3.9394537772336297`*^9, 
+   3.9394537976899247`*^9}, {3.939459094438929*^9, 3.939459156109827*^9}, {
+   3.939459243438871*^9, 
+   3.939459251325055*^9}},ExpressionUUID->"72b67594-b34e-4a36-9f48-\
+469da92deebf"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   StyleBox[
+    RowBox[{
+     StyleBox["(",
+      FontSize->14], 
+     StyleBox["*",
+      FontFamily->"Times New Roman",
+      FontSize->12]}]], 
+   RowBox[{
+    StyleBox[
+     RowBox[{"Take", " ", "the", " ", "limit"}],
+     FontFamily->"Times New Roman",
+     FontSize->12], 
+    StyleBox[";",
+     FontFamily->"Times New Roman",
+     FontSize->12], 
+    StyleBox[" ",
+     FontFamily->"Times New Roman",
+     FontSize->12], 
+    RowBox[{
+     StyleBox["the",
+      FontFamily->"Times New Roman",
+      FontSize->12], 
+     StyleBox[" ",
+      FontFamily->"Times New Roman",
+      FontSize->12], 
+     StyleBox["below",
+      FontFamily->"Times New Roman",
+      FontSize->12], 
+     StyleBox[" ",
+      FontFamily->"Times New Roman",
+      FontSize->12], 
+     StyleBox["code",
+      FontFamily->"Times New Roman",
+      FontSize->12], 
+     StyleBox[" ",
+      FontFamily->"Times New Roman",
+      FontSize->12], 
+     StyleBox["first",
+      FontFamily->"Times New Roman",
+      FontSize->12], 
+     StyleBox[" ",
+      FontFamily->"Times New Roman",
+      FontSize->12], 
+     StyleBox["substitutes",
+      FontFamily->"Times New Roman",
+      FontSize->12], 
+     StyleBox[" ",
+      FontFamily->"Times New Roman",
+      FontSize->12], 
+     TemplateBox[<|"boxes" -> FormBox[
+         RowBox[{
+           SubscriptBox["\[Beta]", 
+            StyleBox["i", "TI"]], "\[Rule]", 
+           StyleBox["x", "TI"], 
+           SubscriptBox["\[Beta]", 
+            StyleBox["i", "TI"]], " and ", 
+           SubscriptBox[
+            StyleBox["m", "TI"], 
+            RowBox[{
+              StyleBox["C", "TI"], 
+              StyleBox["i", "TI"]}]], "\[Rule]", 
+           StyleBox["x", "TI"], 
+           SubscriptBox[
+            StyleBox["m", "TI"], 
+            RowBox[{
+              StyleBox["C", "TI"], 
+              StyleBox["i", "TI"]}]]}], TraditionalForm], "errors" -> {}, 
+       "input" -> 
+       "\\beta_i \\rightarrow x \\beta_i \\text{ and } m_{Ci} \\rightarrow x \
+m_{Ci}", "state" -> "Boxes"|>,
+      "TeXAssistantTemplate"], 
+     StyleBox[" ",
+      FontFamily->"Times New Roman",
+      FontSize->12,
+      FontWeight->"Normal"], 
+     StyleBox["and",
+      FontFamily->"Times New Roman",
+      FontSize->12,
+      FontWeight->"Normal"], 
+     StyleBox[" ",
+      FontFamily->"Times New Roman",
+      FontSize->12,
+      FontWeight->"Normal"], 
+     StyleBox["then",
+      FontFamily->"Times New Roman",
+      FontSize->12,
+      FontWeight->"Normal"], 
+     StyleBox[" ",
+      FontFamily->"Times New Roman",
+      FontSize->12,
+      FontWeight->"Normal"], 
+     StyleBox["takes",
+      FontFamily->"Times New Roman",
+      FontSize->12,
+      FontWeight->"Normal"], 
+     StyleBox[" ",
+      FontFamily->"Times New Roman",
+      FontSize->12,
+      FontWeight->"Normal"], 
+     StyleBox["the",
+      FontFamily->"Times New Roman",
+      FontSize->12,
+      FontWeight->"Normal"], 
+     StyleBox[" ",
+      FontFamily->"Times New Roman",
+      FontSize->12,
+      FontWeight->"Normal"], 
+     StyleBox["limit",
+      FontFamily->"Times New Roman",
+      FontSize->12,
+      FontWeight->"Normal"], 
+     StyleBox[" ",
+      FontFamily->"Times New Roman",
+      FontSize->12,
+      FontWeight->"Normal"], 
+     StyleBox["as",
+      FontFamily->"Times New Roman",
+      FontSize->12,
+      FontWeight->"Normal"], 
+     StyleBox[" ",
+      FontFamily->"Times New Roman",
+      FontSize->12,
+      FontWeight->"Normal"], 
+     StyleBox[
+      TemplateBox[<|"boxes" -> FormBox[
+          RowBox[{
+            StyleBox["x", "TI"], "\[Rule]", "\[Infinity]"}], TraditionalForm],
+         "errors" -> {}, "input" -> "x \\rightarrow \\infty", "state" -> 
+        "Boxes"|>,
+       "TeXAssistantTemplate"],
+      FontFamily->"Times New Roman",
+      FontSize->12,
+      FontWeight->"Normal"]}]}], 
+   StyleBox["*)",
+    FontFamily->"Times New Roman",
+    FontSize->12,
+    FontWeight->"Normal"]}], 
+  StyleBox["\[IndentingNewLine]",
+   FontFamily->"Times New Roman",
+   FontSize->12], 
+  StyleBox[
+   RowBox[{
+    StyleBox["RStarLimit",
+     FontSize->14], 
+    StyleBox[" ",
+     FontSize->14], 
+    StyleBox["=",
+     FontSize->14], 
+    StyleBox[" ",
+     FontSize->14], 
+    RowBox[{
+     StyleBox["Simplify",
+      FontSize->12], 
+     StyleBox["[",
+      FontSize->12], 
+     StyleBox[
+      RowBox[{
+       StyleBox["Limit",
+        FontSize->14], 
+       StyleBox["[",
+        FontSize->14], 
+       RowBox[{
+        RowBox[{
+         StyleBox["Limit",
+          FontSize->14], 
+         StyleBox["[",
+          FontSize->14], 
+         RowBox[{
+          StyleBox[
+           FormBox[
+            FractionBox[
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 SubscriptBox["m", "i"], " ", 
+                 SubscriptBox["\[Tau]", "i"]}], "+", "1"}], ")"}], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 SubscriptBox["m", "Ci"], " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"K", " ", "r", " ", 
+                    SubscriptBox["a", "i"], " ", 
+                    SubscriptBox["\[Tau]", "i"]}], "+", 
+                   SubscriptBox["m", "i"]}], ")"}]}], "+", 
+                RowBox[{
+                 SubscriptBox["m", "i"], " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"K", " ", "r", " ", 
+                    SubscriptBox["a", "i"], " ", 
+                    SubscriptBox["\[Tau]", "i"]}], "+", 
+                   SubscriptBox["\[Beta]", "i"], "+", 
+                   SubscriptBox["m", "i"]}], ")"}]}]}], ")"}]}], 
+             RowBox[{
+              SubscriptBox["a", "i"], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{
+                 SubscriptBox["e", "i"], " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   SubscriptBox["m", "Ci"], "+", 
+                   SubscriptBox["\[Beta]", "i"], "+", 
+                   SubscriptBox["m", "i"]}], ")"}]}], "+", 
+                RowBox[{
+                 SubscriptBox["\[Tau]", "i"], " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{
+                    SubscriptBox["m", "Ci"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    SubscriptBox["m", "i"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"r", " ", 
+                    SubscriptBox["\[Tau]", "i"]}], "-", "1"}], ")"}]}], "+", 
+                    "r"}], ")"}]}], "+", 
+                   RowBox[{
+                    SubscriptBox["m", "i"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", 
+                    SubscriptBox["\[Beta]", "i"]}], "+", 
+                    RowBox[{
+                    SubscriptBox["m", "i"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"r", " ", 
+                    SubscriptBox["\[Tau]", "i"]}], "-", "1"}], ")"}]}], "+", 
+                    "r"}], ")"}]}]}], ")"}]}]}], ")"}]}]],
+            TraditionalForm],
+           FontSize->14], 
+          StyleBox[",",
+           FontSize->14], 
+          RowBox[{
+           StyleBox["{",
+            FontSize->14], 
+           RowBox[{
+            StyleBox[
+             RowBox[{
+              SubscriptBox["\[Beta]", "i"], "->", 
+              RowBox[{"x", " ", 
+               SubscriptBox["\[Beta]", "i"]}]}],
+             FontSize->14], 
+            StyleBox[",",
+             FontSize->14], 
+            RowBox[{
+             StyleBox[
+              SubscriptBox["m", "Ci"],
+              FontSize->14], 
+             StyleBox["->",
+              FontSize->14], 
+             RowBox[{
+              StyleBox["x",
+               FontSize->12], 
+              StyleBox[" ",
+               FontSize->14], 
+              StyleBox[
+               SubscriptBox["m", "Ci"],
+               FontSize->12]}]}]}], 
+           StyleBox["}",
+            FontSize->14]}]}], 
+         StyleBox["]",
+          FontSize->14]}], 
+        StyleBox[",",
+         FontSize->14], 
+        StyleBox[
+         RowBox[{"x", "->", "Infinity"}],
+         FontSize->14]}], 
+       StyleBox["]",
+        FontSize->14]}],
+      FontSize->12], 
+     StyleBox["]",
+      FontSize->14]}]}],
+   FontFamily->"Times New Roman",
+   FontWeight->"Bold"]}]], "Input",
+ CellChangeTimes->{{3.9394538029010344`*^9, 3.9394539360432353`*^9}, 
+   3.939454074036862*^9, {3.9394592555729356`*^9, 3.9394592807821474`*^9}, {
+   3.93945932467723*^9, 
+   3.9394593301889553`*^9}},ExpressionUUID->"5e2573de-52ba-4373-89ed-\
+7b912a17320c"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"1", "+", 
+     RowBox[{
+      SubscriptBox["m", "i"], " ", 
+      SubscriptBox["\[Tau]", "i"]}]}], ")"}], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["m", "i"], " ", 
+      SubscriptBox["\[Beta]", "i"]}], "+", 
+     RowBox[{
+      SubscriptBox["m", "Ci"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["m", "i"], "+", 
+        RowBox[{"K", " ", "r", " ", 
+         SubscriptBox["a", "i"], " ", 
+         SubscriptBox["\[Tau]", "i"]}]}], ")"}]}]}], ")"}]}], 
+  RowBox[{
+   SubscriptBox["a", "i"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["e", "i"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["m", "Ci"], "+", 
+        SubscriptBox["\[Beta]", "i"]}], ")"}]}], "+", 
+     RowBox[{
+      SubscriptBox["\[Tau]", "i"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", 
+          SubscriptBox["m", "i"]}], " ", 
+         SubscriptBox["\[Beta]", "i"]}], "+", 
+        RowBox[{
+         SubscriptBox["m", "Ci"], " ", 
+         RowBox[{"(", 
+          RowBox[{"r", "+", 
+           RowBox[{
+            SubscriptBox["m", "i"], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "1"}], "+", 
+              RowBox[{"r", " ", 
+               SubscriptBox["\[Tau]", "i"]}]}], ")"}]}]}], ")"}]}]}], 
+       ")"}]}]}], ")"}]}]]], "Output",
+ CellChangeTimes->{3.939453937475754*^9, 3.9394540761142445`*^9, 
+  3.9394591968006015`*^9},
+ CellLabel->"Out[16]=",ExpressionUUID->"2725d31c-a7f3-4c12-adaa-41aa20995504"]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["Which, with some rearranging, gives \n\n",
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal"],
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox[
+          StyleBox["R", "TI"], 
+          RowBox[{
+            StyleBox["i", "TI"], ",", 
+            StyleBox["I", "TI"]}], "*"], "\[LongEqual]", "\[Rule]", 
+         SubsuperscriptBox[
+          StyleBox["R", "TI"], 
+          RowBox[{
+            StyleBox["i", "TI"], ",", 
+            StyleBox["E", "TI"]}], "*"], 
+         FractionBox[
+          RowBox[{"1", "+", 
+            StyleBox["K", "TI"], 
+            SubscriptBox[
+             StyleBox["c", "TI"], 
+             StyleBox["i", "TI"]], 
+            FractionBox[
+             RowBox[{
+               StyleBox["r", "TI"], 
+               SubscriptBox[
+                StyleBox["a", "TI"], 
+                StyleBox["i", "TI"]], 
+               SubscriptBox["\[Tau]", 
+                StyleBox["i", "TI"]]}], 
+             SubscriptBox[
+              StyleBox["m", "TI"], 
+              StyleBox["i", "TI"]]]}], 
+          RowBox[{"1", "+", 
+            SubsuperscriptBox[
+             StyleBox["R", "TI"], 
+             RowBox[{
+               StyleBox["i", "TI"], ",", 
+               StyleBox["E", "TI"]}], "*"], 
+            SubscriptBox[
+             StyleBox["c", "TI"], 
+             StyleBox["i", "TI"]], 
+            FractionBox[
+             RowBox[{
+               StyleBox["r", "TI"], 
+               SubscriptBox[
+                StyleBox["a", "TI"], 
+                StyleBox["i", "TI"]], 
+               SubscriptBox["\[Tau]", 
+                StyleBox["i", "TI"]]}], 
+             SubscriptBox[
+              StyleBox["m", "TI"], 
+              StyleBox["i", "TI"]]]}]]}], TraditionalForm], "errors" -> {}, 
+     "input" -> 
+     "R^*_{i,I} =\\rightarrow R^*_{i,E} \\frac{1 + K c_i \\frac{r a_i \
+\\tau_i}{m_i}}{1 + R^*_{i,E} c_i\\frac{r a_i \\tau_i}{m_i}}", "state" -> 
+     "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal",ExpressionUUID->"05b42805-f53f-482f-ac30-2bb238957adc"],
+ StyleBox["\n\nwhere ",
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal"],
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          StyleBox["c", "TI"], 
+          StyleBox["i", "TI"]], "\[LongEqual]", 
+         FractionBox[
+          SubscriptBox[
+           StyleBox["m", "TI"], 
+           RowBox[{
+             StyleBox["C", "TI"], 
+             StyleBox["i", "TI"]}]], 
+          RowBox[{
+            SubscriptBox[
+             StyleBox["m", "TI"], 
+             RowBox[{
+               StyleBox["C", "TI"], 
+               StyleBox["i", "TI"]}]], "+", 
+            SubscriptBox["\[Beta]", 
+             StyleBox["i", "TI"]]}]]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "c_i=\\frac{m_{Ci}}{m_{Ci}+\\beta_i }", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal",ExpressionUUID->"48eca810-e401-4ca9-a6d1-47431fb11ea4"],
+ ".",
+ StyleBox[" This is the same expression from the main text. c",
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal"],
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       SubscriptBox["\[Null]", 
+        StyleBox["i", "TI"]], TraditionalForm], "errors" -> {}, "input" -> 
+     "_i", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal",ExpressionUUID->"5bb87020-02b3-4c0d-be01-af15c08dc700"],
+ StyleBox[" can be interpreted as a probability because constant rates in \
+Ordinary Differential Equations are exponentially distributed. ",
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal"],
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       SubscriptBox[
+        StyleBox["m", "TI"], 
+        RowBox[{
+          StyleBox["C", "TI"], 
+          StyleBox["i", "TI"]}]], TraditionalForm], "errors" -> {}, "input" -> 
+     "m_{Ci} ", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal",ExpressionUUID->"cdab9e27-e7bd-438d-9ac9-7f412a26c4d7"],
+ StyleBox["and ",
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal"],
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       SubscriptBox["\[Beta]", 
+        StyleBox["i", "TI"]], TraditionalForm], "errors" -> {}, "input" -> 
+     "\\beta_i ", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal",ExpressionUUID->"a94d65d0-7ca3-4561-94fe-1c304aa7211d"],
+ StyleBox["are the rates at which contests end due to mortality and due to \
+giving up, respectively. ",
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal"],
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       SubscriptBox[
+        StyleBox["c", "TI"], 
+        StyleBox["i", "TI"]], TraditionalForm], "errors" -> {}, "input" -> 
+     "c_i ", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal",ExpressionUUID->"4142fb11-e077-40ef-8afa-ad131b23adec"],
+ StyleBox["is thus the rate at which contests end due to mortality divided by \
+the total rate at which contests end. By the definition of exponential \
+distributions, this is the probability a contest ends via mortality. ",
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal"]
+}], "Text",
+ CellChangeTimes->{{3.939454092318633*^9, 3.9394540982493577`*^9}, {
+  3.939454201721772*^9, 3.939454223608077*^9}, {3.9394542850520277`*^9, 
+  3.9394542904643874`*^9}, {3.939454354597534*^9, 3.939454356530346*^9}, {
+  3.939458347142188*^9, 
+  3.939458385636103*^9}},ExpressionUUID->"6576365a-3025-4e53-b551-\
+27c6bbfd3ba2"]
+}, Open  ]]
+},
+WindowSize->{1221.75, 819.75},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+TaggingRules-><|"TryRealOnly" -> False|>,
+Background->GrayLevel[1],
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->FrontEnd`FileName[{"Report"}, "StandardReport.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"dbfeb96c-1deb-4a11-990a-56734658811b"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 428, 12, 38, "Input",ExpressionUUID->"12418b54-dc5b-45a4-97b4-81a9f28538db"],
+Cell[CellGroupData[{
+Cell[1011, 36, 422, 9, 34, "Subtitle",ExpressionUUID->"09dcceb0-1fd3-4036-a2b6-7c16b02db033"],
+Cell[1436, 47, 2259, 45, 33, "Text",ExpressionUUID->"e05cd974-f0a2-4d49-bd2b-46facbb531f5"],
+Cell[3698, 94, 8762, 245, 266, "Text",ExpressionUUID->"7f3559e4-812d-48aa-9505-9ac26bf52b05"],
+Cell[CellGroupData[{
+Cell[12485, 343, 5496, 132, 157, "Input",ExpressionUUID->"fcea22b8-f2a6-4a44-aa8d-1c7c8c3b87ec"],
+Cell[17984, 477, 9450, 280, 134, "Output",ExpressionUUID->"735599c5-8ddb-49d0-97eb-b4c645259b1d"]
+}, Open  ]],
+Cell[27449, 760, 26988, 703, 431, "Text",ExpressionUUID->"72b67594-b34e-4a36-9f48-469da92deebf"],
+Cell[CellGroupData[{
+Cell[54462, 1467, 8787, 288, 85, "Input",ExpressionUUID->"5e2573de-52ba-4373-89ed-7b912a17320c"],
+Cell[63252, 1757, 1616, 53, 58, "Output",ExpressionUUID->"2725d31c-a7f3-4c12-adaa-41aa20995504"]
+}, Open  ]],
+Cell[64883, 1813, 6090, 169, 186, "Text",ExpressionUUID->"6576365a-3025-4e53-b551-27c6bbfd3ba2"]
+}, Open  ]]
+}
+]
+*)
+
