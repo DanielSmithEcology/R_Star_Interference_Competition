@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     73048,       1912]
-NotebookOptionsPosition[     69615,       1844]
-NotebookOutlinePosition[     70422,       1870]
-CellTagsIndexPosition[     70379,       1867]
+NotebookDataLength[     73034,       1912]
+NotebookOptionsPosition[     69601,       1844]
+NotebookOutlinePosition[     70408,       1870]
+CellTagsIndexPosition[     70365,       1867]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -40,7 +40,7 @@ Cell[CellGroupData[{
 Cell[TextData[StyleBox["Section D: Invasion Criteria, No Interference \
 Competition ", "Section",
  FontFamily->"Times New Roman",
- FontWeight->"Normal",
+ FontWeight->"Bold",
  FontColor->GrayLevel[0]]], "Subsection",
  CellChangeTimes->{{3.9389797912237153`*^9, 3.9389798044158287`*^9}, {
   3.938979844847793*^9, 3.938979850651105*^9}},
@@ -52,7 +52,7 @@ Cell[CellGroupData[{
 Cell[TextData[StyleBox["Introduction: ", "Section",
  FontFamily->"Times New Roman",
  FontSize->24,
- FontWeight->"Normal",
+ FontWeight->"Bold",
  FontColor->GrayLevel[0]]], "Subsubsection",
  CellChangeTimes->{{3.9038825814310303`*^9, 3.9038826227525444`*^9}, {
   3.938979715234115*^9, 3.938979717443282*^9}, {3.9389834339376183`*^9, 
@@ -266,7 +266,7 @@ Cell[CellGroupData[{
 
 Cell[TextData[StyleBox["D.1 Consumer-Resource Equilibrium Calculation ",
  FontSize->24,
- FontWeight->"Normal"]], "Subsection",
+ FontWeight->"Bold"]], "Subsection",
  CellChangeTimes->{{3.9038824165057936`*^9, 3.9038824447118196`*^9}, {
   3.9038826537104063`*^9, 3.903882654292079*^9}, {3.938680442326213*^9, 
   3.9386804428972235`*^9}, {3.938993678601859*^9, 3.9389936820041523`*^9}, {
@@ -650,11 +650,11 @@ Cell[CellGroupData[{
 Cell[TextData[{
  StyleBox[" ",
   FontSize->24,
-  FontWeight->"Normal"],
+  FontWeight->"Bold"],
  StyleBox["D.2 Calculation of the Jacobian Matrix", "Section",
   FontFamily->"Times New Roman",
   FontSize->24,
-  FontWeight->"Normal",
+  FontWeight->"Bold",
   FontColor->GrayLevel[0]]
 }], "Subsection",
  CellChangeTimes->{{3.903882452837911*^9, 3.9038824613892937`*^9}, {
@@ -957,7 +957,9 @@ Cell[BoxData[
         RowBox[{
          SubscriptBox["S", "j"], ",", 
          SubscriptBox["H", "j"]}], "}"}]}], "]"}]}], ";"}], 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   StyleBox["\[IndentingNewLine]",
+    FontSize->14], 
    StyleBox[
     RowBox[{"(*", 
      RowBox[{
@@ -986,9 +988,7 @@ Cell[BoxData[
         "input" -> "S_i = S^*_i , H_i = H^*_i , R_i = R^*_i", "state" -> 
         "Boxes"|>,
        "TeXAssistantTemplate"]}], " ", "*)"}],
-    FontSize->14], 
-   StyleBox["\[IndentingNewLine]",
-    FontSize->14], 
+    FontSize->14], "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"JacMat2", " ", "=", " ", 
      RowBox[{"Limit", "[", 
@@ -1021,15 +1021,15 @@ Cell[BoxData[
         "input" -> "R^*_i", "state" -> "Boxes"|>,
        "TeXAssistantTemplate"], " ", "for", " ", "syntax", " ", "reasons"}], 
      "*)"}],
-    FontSize->14], "\[IndentingNewLine]", 
+    FontSize->14], 
+   StyleBox["\[IndentingNewLine]",
+    FontSize->14], 
    StyleBox["\[IndentingNewLine]",
     FontSize->14], 
    StyleBox[
     RowBox[{"(*", 
      RowBox[{"Show", " ", "the", " ", "Jacobian", " ", "Matrix"}], "*)"}],
-    FontSize->14], 
-   StyleBox["\[IndentingNewLine]",
-    FontSize->14], 
+    FontSize->14], "\[IndentingNewLine]", 
    RowBox[{"JacMat2", "//", "TraditionalForm"}]}]}]], "Input",
  CellChangeTimes->{{3.903883551098297*^9, 3.9038835809009776`*^9}, {
    3.903883867110389*^9, 3.9038839232633953`*^9}, {3.903884359401673*^9, 
@@ -1188,7 +1188,7 @@ Cell[CellGroupData[{
 Cell[TextData[StyleBox["D.3 Calculation of Eigenvalues", "Section",
  FontFamily->"Times New Roman",
  FontSize->24,
- FontWeight->"Normal",
+ FontWeight->"Bold",
  FontColor->GrayLevel[0]]], "Subsection",
  CellChangeTimes->{{3.903882470621873*^9, 3.9038824779488215`*^9}, {
    3.9038826604054*^9, 3.9038826658426514`*^9}, 3.938680450939614*^9, {
@@ -1545,7 +1545,7 @@ Cell[TextData[StyleBox["D.4 Rearrangement of Eigenvalues into Invasion \
 Criteria ", "Section",
  FontFamily->"Times New Roman",
  FontSize->24,
- FontWeight->"Normal",
+ FontWeight->"Bold",
  FontColor->GrayLevel[0]]], "Subsection",
  CellChangeTimes->{{3.9038824831050644`*^9, 3.9038824973849154`*^9}, {
    3.903882668576706*^9, 3.903882688575037*^9}, 3.9386804529475427`*^9, {
@@ -1871,48 +1871,48 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 623, 15, 35, "Input",ExpressionUUID->"a090d952-ebcf-4d52-ba9e-579a28a0ff87"],
 Cell[CellGroupData[{
-Cell[1206, 39, 415, 8, 36, "Subsection",ExpressionUUID->"6cfb1973-dc8f-4eca-ab85-a13dccdf9391"],
+Cell[1206, 39, 413, 8, 36, "Subsection",ExpressionUUID->"6cfb1973-dc8f-4eca-ab85-a13dccdf9391"],
 Cell[CellGroupData[{
-Cell[1646, 51, 519, 11, 32, "Subsubsection",ExpressionUUID->"aa584400-855c-435f-b37b-1cb717b874b4"],
-Cell[2168, 64, 7884, 196, 258, "Text",ExpressionUUID->"64ef87ff-0a75-46af-a9b6-4fc48819ad1f"]
+Cell[1644, 51, 517, 11, 32, "Subsubsection",ExpressionUUID->"aa584400-855c-435f-b37b-1cb717b874b4"],
+Cell[2164, 64, 7884, 196, 258, "Text",ExpressionUUID->"64ef87ff-0a75-46af-a9b6-4fc48819ad1f"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10101, 266, 528, 10, 32, "Subsection",ExpressionUUID->"8f43f8c3-62eb-44fb-9f7f-8f3e0208eb5d"],
-Cell[10632, 278, 1047, 21, 27, "Text",ExpressionUUID->"c50bc92a-622f-49ec-b15b-88cfe32eeb15"],
+Cell[10097, 266, 526, 10, 32, "Subsection",ExpressionUUID->"8f43f8c3-62eb-44fb-9f7f-8f3e0208eb5d"],
+Cell[10626, 278, 1047, 21, 27, "Text",ExpressionUUID->"c50bc92a-622f-49ec-b15b-88cfe32eeb15"],
 Cell[CellGroupData[{
-Cell[11704, 303, 4510, 118, 207, "Input",ExpressionUUID->"c0b125ca-4071-4bf7-9b89-4bf6fb088073"],
-Cell[16217, 423, 2467, 80, 65, "Output",ExpressionUUID->"2f0f3afb-69e3-4301-ad58-e199fbaea00e"]
+Cell[11698, 303, 4510, 118, 207, "Input",ExpressionUUID->"c0b125ca-4071-4bf7-9b89-4bf6fb088073"],
+Cell[16211, 423, 2467, 80, 65, "Output",ExpressionUUID->"2f0f3afb-69e3-4301-ad58-e199fbaea00e"]
 }, Open  ]],
-Cell[18699, 506, 4984, 138, 159, "Text",ExpressionUUID->"d6d90940-3aeb-474c-a365-9b8718ec4aa2"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[23720, 649, 650, 17, 32, "Subsection",ExpressionUUID->"50971915-98b5-4f27-87fc-71a0744cafbe"],
-Cell[24373, 668, 7397, 177, 134, "Text",ExpressionUUID->"1f0d1638-7bf7-49d2-bf56-c9ebf57a0825"],
-Cell[CellGroupData[{
-Cell[31795, 849, 8319, 205, 242, "Input",ExpressionUUID->"ca55ee86-0488-4dc0-9b44-8d33ecd548c2"],
-Cell[40117, 1056, 1381, 43, 87, "Output",ExpressionUUID->"a7f668b3-aef2-4647-b312-47eee3f8cd60"]
-}, Open  ]],
-Cell[41513, 1102, 3169, 80, 103, "Text",ExpressionUUID->"086b8dca-2847-40ec-a320-d9ef1627643a"]
+Cell[18693, 506, 4984, 138, 159, "Text",ExpressionUUID->"d6d90940-3aeb-474c-a365-9b8718ec4aa2"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[44719, 1187, 551, 12, 32, "Subsection",ExpressionUUID->"09e97088-3a6f-4f5f-8bc1-ae5fa126db2e"],
-Cell[45273, 1201, 1282, 34, 27, "Text",ExpressionUUID->"3dd207de-9001-45a3-bbbd-eb53e01eccac"],
+Cell[23714, 649, 646, 17, 32, "Subsection",ExpressionUUID->"50971915-98b5-4f27-87fc-71a0744cafbe"],
+Cell[24363, 668, 7397, 177, 134, "Text",ExpressionUUID->"1f0d1638-7bf7-49d2-bf56-c9ebf57a0825"],
 Cell[CellGroupData[{
-Cell[46580, 1239, 2050, 50, 97, "Input",ExpressionUUID->"19d8eaf9-d0b7-4fe5-8a42-5b08c147b62e"],
-Cell[48633, 1291, 2474, 72, 61, "Output",ExpressionUUID->"c74f2f09-c384-450f-b035-c7a1f7752deb"]
+Cell[31785, 849, 8319, 205, 242, "Input",ExpressionUUID->"ca55ee86-0488-4dc0-9b44-8d33ecd548c2"],
+Cell[40107, 1056, 1381, 43, 87, "Output",ExpressionUUID->"a7f668b3-aef2-4647-b312-47eee3f8cd60"]
 }, Open  ]],
-Cell[51122, 1366, 7130, 172, 215, "Text",ExpressionUUID->"173fdcbf-f723-4b76-96b4-40e42953ed17"]
+Cell[41503, 1102, 3169, 80, 103, "Text",ExpressionUUID->"086b8dca-2847-40ec-a320-d9ef1627643a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[58289, 1543, 584, 13, 32, "Subsection",ExpressionUUID->"60e59e53-b7ff-4fa9-9e91-b12b0dcd8cec"],
-Cell[58876, 1558, 1454, 36, 27, "Text",ExpressionUUID->"e025f1b5-0909-47a5-bb0a-8b40c283cda6"],
+Cell[44709, 1187, 549, 12, 32, "Subsection",ExpressionUUID->"09e97088-3a6f-4f5f-8bc1-ae5fa126db2e"],
+Cell[45261, 1201, 1282, 34, 27, "Text",ExpressionUUID->"3dd207de-9001-45a3-bbbd-eb53e01eccac"],
 Cell[CellGroupData[{
-Cell[60355, 1598, 3555, 82, 85, "Input",ExpressionUUID->"7af02672-0aa7-4f54-bcff-5f4f3a15ec56"],
-Cell[63913, 1682, 760, 27, 68, "Output",ExpressionUUID->"38b3e696-cb05-4fb7-8ef5-6ed838993b69"]
+Cell[46568, 1239, 2050, 50, 97, "Input",ExpressionUUID->"19d8eaf9-d0b7-4fe5-8a42-5b08c147b62e"],
+Cell[48621, 1291, 2474, 72, 61, "Output",ExpressionUUID->"c74f2f09-c384-450f-b035-c7a1f7752deb"]
 }, Open  ]],
-Cell[64688, 1712, 3715, 98, 143, "Text",ExpressionUUID->"805aa4eb-261e-4a48-887c-9dfdb2699733"],
-Cell[68406, 1812, 1193, 29, 106, "Text",ExpressionUUID->"59aad676-f5fe-4aa6-b860-7b6702df1365"]
+Cell[51110, 1366, 7130, 172, 215, "Text",ExpressionUUID->"173fdcbf-f723-4b76-96b4-40e42953ed17"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[58277, 1543, 582, 13, 32, "Subsection",ExpressionUUID->"60e59e53-b7ff-4fa9-9e91-b12b0dcd8cec"],
+Cell[58862, 1558, 1454, 36, 27, "Text",ExpressionUUID->"e025f1b5-0909-47a5-bb0a-8b40c283cda6"],
+Cell[CellGroupData[{
+Cell[60341, 1598, 3555, 82, 85, "Input",ExpressionUUID->"7af02672-0aa7-4f54-bcff-5f4f3a15ec56"],
+Cell[63899, 1682, 760, 27, 68, "Output",ExpressionUUID->"38b3e696-cb05-4fb7-8ef5-6ed838993b69"]
+}, Open  ]],
+Cell[64674, 1712, 3715, 98, 143, "Text",ExpressionUUID->"805aa4eb-261e-4a48-887c-9dfdb2699733"],
+Cell[68392, 1812, 1193, 29, 106, "Text",ExpressionUUID->"59aad676-f5fe-4aa6-b860-7b6702df1365"]
 }, Open  ]]
 }
 ]
