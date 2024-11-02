@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     72995,       2033]
-NotebookOptionsPosition[     71528,       2001]
-NotebookOutlinePosition[     72071,       2020]
-CellTagsIndexPosition[     72028,       2017]
+NotebookDataLength[     73875,       2052]
+NotebookOptionsPosition[     72086,       2011]
+NotebookOutlinePosition[     72951,       2039]
+CellTagsIndexPosition[     72908,       2036]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -30,7 +30,7 @@ Cell[BoxData[
  FontFamily->"Times New Roman",
  FontSize->12,
  FontColor->GrayLevel[0],
- CellLabel->"In[18]:=",ExpressionUUID->"93cb38ac-9317-41f4-822d-a4ac88c04605"],
+ CellLabel->"In[18]:=",ExpressionUUID->"c7270e9f-9aeb-42da-8d03-e851978b6b06"],
 
 Cell[CellGroupData[{
 
@@ -1235,7 +1235,9 @@ _i+m_i\\right)+m_i \\left(K r a_i \\tau _i+\\beta _i+m_i\\right)\\right)}{a_i \
        RowBox[{
          SubsuperscriptBox[
           StyleBox["R", "TI"], 
-          StyleBox["i", "TI"], "*"], "\[LongEqual]", 
+          RowBox[{
+            StyleBox["i", "TI"], ",", 
+            StyleBox["E", "TI"]}], "*"], "\[LongEqual]", 
          FractionBox[
           RowBox[{
             SubscriptBox[
@@ -1261,8 +1263,8 @@ _i+m_i\\right)+m_i \\left(K r a_i \\tau _i+\\beta _i+m_i\\right)\\right)}{a_i \
               SubscriptBox["\[Tau]", 
                StyleBox["i", "TI"]]}], ")"}]]}], TraditionalForm], 
      "errors" -> {}, "input" -> 
-     "R^*_i=\\frac{m_i\\left(m_i\\tau _i+1\\right)}{a_i\\left(e_i-m_i\\tau _i\
-\\right)}", "state" -> "Boxes"|>,
+     "R^*_{i,E}=\\frac{m_i\\left(m_i\\tau \
+_i+1\\right)}{a_i\\left(e_i-m_i\\tau _i\\right)}", "state" -> "Boxes"|>,
     "TeXAssistantTemplate"], TraditionalForm]],
   FontFamily->"Times New Roman",
   FontSize->12,
@@ -1359,8 +1361,10 @@ _i+m_i\\right)+m_i \\left(K r a_i \\tau _i+\\beta _i+m_i\\right)\\right)}{a_i \
 \\tau_i}{\\beta_i+m_i+m_{Ci}} (1+\\frac{m_{Ci}}{ m_i} )}{1+ R_{i,E}^\\ast \
 \\frac{\\ r\\ a_i \\tau_i}{\\beta_i+m_i+m_{Ci}} (1+\\frac{m_{Ci}}{ m_i} )}", 
      "state" -> "Boxes"|>,
-    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "ffa475a2-58b4-4015-aa5c-d2eb55703e2c"],
+    "TeXAssistantTemplate"], TraditionalForm]],
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal",ExpressionUUID->"ffa475a2-58b4-4015-aa5c-d2eb55703e2c"],
  "\n\n",
  StyleBox["which is the same as Equation (4) from the main text. \n\n\
 Secondly, in the main text we consider the case in which contests that are \
@@ -1467,7 +1471,11 @@ achieved by making the substitution of parameters ",
     "TeXAssistantTemplate"], TraditionalForm]],
   FontFamily->"Times New Roman",
   FontSize->12,ExpressionUUID->"04a08d3e-6fcd-40f2-8300-077b8dfcf6c1"],
- ". We do so below:  "
+ ". ",
+ StyleBox["We do so below:  ",
+  FontFamily->"Times New Roman",
+  FontSize->12,
+  FontWeight->"Normal"]
 }], "Text",
  CellChangeTimes->{{3.939451638153906*^9, 3.939451662929695*^9}, {
    3.9394528221811867`*^9, 3.9394528824818597`*^9}, {3.9394529240830727`*^9, 
@@ -1828,7 +1836,7 @@ Cell[BoxData[
 }, Open  ]],
 
 Cell[TextData[{
- StyleBox["Which, with some rearranging, gives \n\n",
+ StyleBox["Which, with some rearranging, gives \n\n\n",
   FontFamily->"Times New Roman",
   FontSize->12,
   FontWeight->"Normal"],
@@ -1921,8 +1929,7 @@ Cell[TextData[{
   FontFamily->"Times New Roman",
   FontSize->12,
   FontWeight->"Normal",ExpressionUUID->"48eca810-e401-4ca9-a6d1-47431fb11ea4"],
- ".",
- StyleBox[" This is the same expression from the main text. c",
+ StyleBox[". This is the same expression from the main text. Note that c",
   FontFamily->"Times New Roman",
   FontSize->12,
   FontWeight->"Normal"],
@@ -1936,71 +1943,83 @@ Cell[TextData[{
   FontFamily->"Times New Roman",
   FontSize->12,
   FontWeight->"Normal",ExpressionUUID->"5bb87020-02b3-4c0d-be01-af15c08dc700"],
- StyleBox[" can be interpreted as a probability because constant rates in \
-Ordinary Differential Equations are exponentially distributed. ",
+ StyleBox[" can be interpreted as the probability of mortality due to a \
+contest. To see this, recall that constant rates in Ordinary Differential \
+Equations (e.g., ",
   FontFamily->"Times New Roman",
   FontSize->12,
   FontWeight->"Normal"],
  Cell[BoxData[
   FormBox[
    TemplateBox[<|"boxes" -> FormBox[
-       SubscriptBox[
-        StyleBox["m", "TI"], 
-        RowBox[{
-          StyleBox["C", "TI"], 
-          StyleBox["i", "TI"]}]], TraditionalForm], "errors" -> {}, "input" -> 
-     "m_{Ci} ", "state" -> "Boxes"|>,
-    "TeXAssistantTemplate"], TraditionalForm]],
-  FontFamily->"Times New Roman",
-  FontSize->12,
-  FontWeight->"Normal",ExpressionUUID->"cdab9e27-e7bd-438d-9ac9-7f412a26c4d7"],
- StyleBox["and ",
-  FontFamily->"Times New Roman",
-  FontSize->12,
-  FontWeight->"Normal"],
- Cell[BoxData[
-  FormBox[
-   TemplateBox[<|"boxes" -> FormBox[
-       SubscriptBox["\[Beta]", 
-        StyleBox["i", "TI"]], TraditionalForm], "errors" -> {}, "input" -> 
-     "\\beta_i ", "state" -> "Boxes"|>,
-    "TeXAssistantTemplate"], TraditionalForm]],
-  FontFamily->"Times New Roman",
-  FontSize->12,
-  FontWeight->"Normal",ExpressionUUID->"a94d65d0-7ca3-4561-94fe-1c304aa7211d"],
- StyleBox["are the rates at which contests end due to mortality and due to \
-giving up, respectively. ",
+       RowBox[{
+         StyleBox["d", "TI"], 
+         StyleBox["N", "TI"], "/", 
+         StyleBox["d", "TI"], 
+         StyleBox["t", "TI"], "\[LongEqual]", "-", 
+         StyleBox["k", "TI"], "*", 
+         StyleBox["N", "TI"]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "dN/dt = -k*N", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "5e9b52e1-9f85-4df4-84dc-9914bfcbf92a"],
+ StyleBox[") are the deterministic mass action limit of exponentially \
+distributed times to events. If two random variables, A and B, are \
+exponentially distributed with rates a and b, P[A happens before B] = \
+a/(a+b). In our context, B represents the probability a contest ends due to \
+mortality and A represents the probability a contest ends due to giving up. \
+Substituting the appropriate rates for A and B yields ",
   FontFamily->"Times New Roman",
   FontSize->12,
   FontWeight->"Normal"],
  Cell[BoxData[
   FormBox[
    TemplateBox[<|"boxes" -> FormBox[
-       SubscriptBox[
-        StyleBox["c", "TI"], 
-        StyleBox["i", "TI"]], TraditionalForm], "errors" -> {}, "input" -> 
-     "c_i ", "state" -> "Boxes"|>,
+       RowBox[{
+         SubscriptBox[
+          StyleBox["m", "TI"], 
+          RowBox[{
+            StyleBox["C", "TI"], 
+            StyleBox["i", "TI"]}]], "/", 
+         RowBox[{"(", 
+           RowBox[{
+             SubscriptBox[
+              StyleBox["m", "TI"], 
+              RowBox[{
+                StyleBox["C", "TI"], 
+                StyleBox["i", "TI"]}]], "+", 
+             SubscriptBox["\[Beta]", 
+              StyleBox["i", "TI"]]}], ")"}]}], TraditionalForm], 
+     "errors" -> {}, "input" -> "m_{Ci}/(m_{Ci} + \\beta_i)", "state" -> 
+     "Boxes"|>,
     "TeXAssistantTemplate"], TraditionalForm]],
   FontFamily->"Times New Roman",
   FontSize->12,
-  FontWeight->"Normal",ExpressionUUID->"4142fb11-e077-40ef-8afa-ad131b23adec"],
- StyleBox["is thus the rate at which contests end due to mortality divided by \
-the total rate at which contests end. By the definition of exponential \
-distributions, this is the probability a contest ends via mortality. ",
-  FontFamily->"Times New Roman",
-  FontSize->12,
-  FontWeight->"Normal"]
+  FontWeight->"Normal",ExpressionUUID->"4bf8e2bd-75ca-49ef-92ad-2744596bffd0"],
+ ". "
 }], "Text",
  CellChangeTimes->{{3.939454092318633*^9, 3.9394540982493577`*^9}, {
   3.939454201721772*^9, 3.939454223608077*^9}, {3.9394542850520277`*^9, 
   3.9394542904643874`*^9}, {3.939454354597534*^9, 3.939454356530346*^9}, {
-  3.939458347142188*^9, 
-  3.939458385636103*^9}},ExpressionUUID->"6576365a-3025-4e53-b551-\
+  3.939458347142188*^9, 3.939458385636103*^9}, {3.9395005671670094`*^9, 
+  3.9395005738575993`*^9}, {3.939500663942594*^9, 3.9395007112176404`*^9}, {
+  3.939500743936976*^9, 3.939500776809602*^9}, {3.9395008090915484`*^9, 
+  3.9395009385083437`*^9}, {3.9395009758182573`*^9, 3.9395009927002215`*^9}, {
+  3.939501601547724*^9, 
+  3.9395016296723394`*^9}},ExpressionUUID->"6576365a-3025-4e53-b551-\
 27c6bbfd3ba2"]
 }, Open  ]]
 },
-WindowSize->{1428., 825.75},
+WindowSize->{1428., 819.75},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
+PrintingStartingPageNumber->1,
+PageHeaders->{{None, None, None}, {None, None, None}},
+PageFooters->{{None, None, None}, {None, None, None}},
+PageHeaderLines->{False, False},
+PageFooterLines->{False, False},
+PrintingOptions->{"FacingPages"->True,
+"FirstPageFace"->Right,
+"FirstPageFooter"->True,
+"FirstPageHeader"->False},
 TaggingRules-><|"TryRealOnly" -> False|>,
 Background->GrayLevel[1],
 FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
@@ -2019,7 +2038,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 428, 12, 38, "Input",ExpressionUUID->"93cb38ac-9317-41f4-822d-a4ac88c04605"],
+Cell[558, 20, 428, 12, 38, "Input",ExpressionUUID->"c7270e9f-9aeb-42da-8d03-e851978b6b06"],
 Cell[CellGroupData[{
 Cell[1011, 36, 928, 25, 37, "Subtitle",ExpressionUUID->"09dcceb0-1fd3-4036-a2b6-7c16b02db033"],
 Cell[1942, 63, 2259, 45, 33, "Text",ExpressionUUID->"e05cd974-f0a2-4d49-bd2b-46facbb531f5"],
@@ -2028,12 +2047,12 @@ Cell[CellGroupData[{
 Cell[13024, 359, 5496, 132, 157, "Input",ExpressionUUID->"fcea22b8-f2a6-4a44-aa8d-1c7c8c3b87ec"],
 Cell[18523, 493, 9450, 280, 134, "Output",ExpressionUUID->"735599c5-8ddb-49d0-97eb-b4c645259b1d"]
 }, Open  ]],
-Cell[27988, 776, 26988, 703, 437, "Text",ExpressionUUID->"72b67594-b34e-4a36-9f48-469da92deebf"],
+Cell[27988, 776, 27212, 711, 436, "Text",ExpressionUUID->"72b67594-b34e-4a36-9f48-469da92deebf"],
 Cell[CellGroupData[{
-Cell[55001, 1483, 8787, 288, 85, "Input",ExpressionUUID->"5e2573de-52ba-4373-89ed-7b912a17320c"],
-Cell[63791, 1773, 1616, 53, 58, "Output",ExpressionUUID->"2725d31c-a7f3-4c12-adaa-41aa20995504"]
+Cell[55225, 1491, 8787, 288, 85, "Input",ExpressionUUID->"5e2573de-52ba-4373-89ed-7b912a17320c"],
+Cell[64015, 1781, 1616, 53, 58, "Output",ExpressionUUID->"2725d31c-a7f3-4c12-adaa-41aa20995504"]
 }, Open  ]],
-Cell[65422, 1829, 6090, 169, 169, "Text",ExpressionUUID->"6576365a-3025-4e53-b551-27c6bbfd3ba2"]
+Cell[65646, 1837, 6424, 171, 207, "Text",ExpressionUUID->"6576365a-3025-4e53-b551-27c6bbfd3ba2"]
 }, Open  ]]
 }
 ]
