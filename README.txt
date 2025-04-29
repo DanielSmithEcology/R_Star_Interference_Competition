@@ -1,7 +1,7 @@
 #########################
 DATA & CODE FILE OVERVIEW
 #########################
-This repository consists of 21 code scripts and this README document. The code will reproduce all figures from the main text, all figures from the Supplementary Materials, and contains the code used to make Supplementary Materials sections D-G.  
+This repository consists of 23 code scripts and this README document. The code will reproduce all figures from the main text, all figures from the Supplementary Materials, and contains the code used to make Supplementary Materials sections D-G.  
 
 Main_Text_Code: 
 	1. Figure_2_Code.nb    -- will reproduce figure 2
@@ -20,17 +20,17 @@ Supplementary_Materials_Figure_Code:
 	13. Supplementary_Materials_Section_I_Fig_4_K_50.nb        -- will reproduce Supplementary figure I4
 	14. Supplementary_Materials_Section_I_Fig_5_r_0_052.nb     -- will reproduce Supplementary figure I5
 	15. Supplementary_Materials_Section_I_Fig_6_r_1_3.nb       -- will reproduce Supplementary figure I6
-	15. Supplementary_Materials_Section_I_Fig_7_m_0_025.nb     -- will reproduce Supplementary figure I7
-	16. Supplementary_Materials Section_I_Fig_8_m_0_09.nb      -- will reproduce Supplementary figure I8
-	17. Supplementary_Materials_Section_I_Fig_9_e_0_025.nb	   -- will reproduce Supplementary figure I9
-	17. Supplementary_Materials_Section_I_Fig_10_e_0_045.nb	   -- will reproduce Supplementary figure I10
+	16. Supplementary_Materials_Section_I_Fig_7_m_0_025.nb     -- will reproduce Supplementary figure I7
+	17. Supplementary_Materials Section_I_Fig_8_m_0_09.nb      -- will reproduce Supplementary figure I8
+	18. Supplementary_Materials_Section_I_Fig_9_e_0_025.nb	   -- will reproduce Supplementary figure I9
+	19. Supplementary_Materials_Section_I_Fig_10_e_0_045.nb	   -- will reproduce Supplementary figure I10
 
 
 Supplementary_Notebooks_Code: 
-	18. Supplementary Materials Section D.nb   -- the Mathematica notebook used to make Supplementary Materials D 
-	19. Supplementary Materials Section E.nb   -- the Mathematica notebook used to make Supplementary Materials E 
-	20. Supplementary Materials Section F.nb   -- the Mathematica notebook used to make Supplementary Materials F 
-	21. Supplementary Materials Section G.nb   -- the Mathematica notebook used to make Supplementary Materials G 
+	20. Supplementary Materials Section D.nb   -- the Mathematica notebook used to make Supplementary Materials D 
+	21. Supplementary Materials Section E.nb   -- the Mathematica notebook used to make Supplementary Materials E 
+	22. Supplementary Materials Section F.nb   -- the Mathematica notebook used to make Supplementary Materials F 
+	23. Supplementary Materials Section G.nb   -- the Mathematica notebook used to make Supplementary Materials G 
 
 
 #################
