@@ -1,6 +1,6 @@
-========================================================================================================================================================
-=== Code for: A Mechanistically Integrated Model of Exploitative and Interference Competition over a Single Resource Produces Widespread Coexistence ===
-========================================================================================================================================================
+==========================================================================================================================
+Code for: A Mechanistically Integrated Model of Exploitative and Interference Competition over a Single Resource Produces Widespread Coexistence 
+===========================================================================================================================
 
 ---------------------
 Introduction
@@ -18,17 +18,15 @@ by Daniel J.B. Smith and Joanna Masel
 Repository Overview
 ---------------------
 
+This repository contains 23 code scripts and this `README` file. The codebase is organized to:
 
-# 📁 Repository Overview
+    - Reproduce all figures from the main text
+    - Reproduce all figures from the Supplementary Materials
+    - Generate content for Supplementary Sections D–G
 
-This repository contains **23 code scripts** and this `README` file. The codebase is organized to:
-
-- Reproduce **all figures** from the **main text**
-- Reproduce **all figures** from the **Supplementary Materials**
-- Generate content for **Supplementary Sections D–G**
+Each script can be run independently. 
 
 ---
-
 
 ---------------------
 Contact
@@ -37,7 +35,6 @@ Contact
 For questions or feedback, please contact:  daniel.21594@gmail.com
 
 ---
-
 
 ---------------------
 Main Text Figures
