@@ -1,44 +1,110 @@
-#########################
-DATA & CODE FILE OVERVIEW
-#########################
-This repository consists of 23 code scripts and this README document. The code will reproduce all figures from the main text, all figures from the Supplementary Materials, and contains the code used to make Supplementary Materials sections D-G.  
+========================================================================================================================================================
+=== Code for: A Mechanistically Integrated Model of Exploitative and Interference Competition over a Single Resource Produces Widespread Coexistence ===
+========================================================================================================================================================
 
-Main_Text_Code: 
-	1. Figure_2_Code.nb    -- will reproduce figure 2
-	2. Figure_3_Code.nb    -- will reproduce figure 3
-	3. Figure_4_Code.nb    -- will reproduce figure 4
+---------------------
+Introduction
+---------------------
 
-Supplementary_Materials_Figure_Code:
-	5.  Supplementary_Material_A_Eigenvalues.R                 -- will reproduce Supplementary figure A1
-	6.  Supplementary_Material_B_ODE_Simulations.jl            -- will reproduce Supplementary figure B1
-	7.  Supplementary_Material_C_Simulations.jl                -- will reproduce Supplementary figure C1
-	8.  Supplementary_Material_G_Eigenvalues.R                 -- will reproduce Supplementary figure G1
-	9.  Supplementary_Material_G_Pairwise_Invasion.nb          -- will reproduce Supplementary figure G2
-	10. Supplementary_Material_H_Priority_Effects_Code.R       -- will reproduce Supplementary figure H1
-	11. Supplementary_Material_Section_I_Fig_2.nb		   -- will reproduce Supplementary figure I2
-	12. Supplementary_Materials_Section_I_Fig_3_K_1250.nb      -- will reproduce Supplementary figure I3
-	13. Supplementary_Materials_Section_I_Fig_4_K_50.nb        -- will reproduce Supplementary figure I4
-	14. Supplementary_Materials_Section_I_Fig_5_r_0_052.nb     -- will reproduce Supplementary figure I5
-	15. Supplementary_Materials_Section_I_Fig_6_r_1_3.nb       -- will reproduce Supplementary figure I6
-	16. Supplementary_Materials_Section_I_Fig_7_m_0_025.nb     -- will reproduce Supplementary figure I7
-	17. Supplementary_Materials Section_I_Fig_8_m_0_09.nb      -- will reproduce Supplementary figure I8
-	18. Supplementary_Materials_Section_I_Fig_9_e_0_025.nb	   -- will reproduce Supplementary figure I9
-	19. Supplementary_Materials_Section_I_Fig_10_e_0_045.nb	   -- will reproduce Supplementary figure I10
+This repository accompanies the article:
+
+"A Mechanistically Integrated Model of Exploitative and Interference Competition over a Single Resource Produces Widespread Coexistence" 
+
+by Daniel J.B. Smith and Joanna Masel
+
+---
+
+---------------------
+Repository Overview
+---------------------
 
 
-Supplementary_Notebooks_Code: 
-	20. Supplementary Materials Section D.nb   -- the Mathematica notebook used to make Supplementary Materials D 
-	21. Supplementary Materials Section E.nb   -- the Mathematica notebook used to make Supplementary Materials E 
-	22. Supplementary Materials Section F.nb   -- the Mathematica notebook used to make Supplementary Materials F 
-	23. Supplementary Materials Section G.nb   -- the Mathematica notebook used to make Supplementary Materials G 
+# 📁 Repository Overview
+
+This repository contains **23 code scripts** and this `README` file. The codebase is organized to:
+
+- Reproduce **all figures** from the **main text**
+- Reproduce **all figures** from the **Supplementary Materials**
+- Generate content for **Supplementary Sections D–G**
+
+---
 
 
-#################
-SOFTWARE VERSIONS
-#################
-Code was written using: 
-	- Mathematica Version 13.2
-	- R version 4.3.0
-	- Juila Version 1.11.1 
+---------------------
+Contact
+---------------------
+
+For questions or feedback, please contact:  daniel.21594@gmail.com
+
+---
 
 
+---------------------
+Main Text Figures
+---------------------
+
+Code to reproduce figures from main text: 
+
+------------------------------------------------
+|       Script       |       Description       |
+|--------------------|-------------------------|
+| `Figure_2_Code.nb` | Reproduces **Figure 2** |
+| `Figure_3_Code.nb` | Reproduces **Figure 3** |
+| `Figure_4_Code.nb` | Reproduces **Figure 4** |
+
+---
+
+------------------------------------------
+Supplementary Materials Figures
+------------------------------------------
+
+Code to reproduce figures from Supplementary Materials: 
+
+--------------------------------------------------------------------------------------------------
+| Script 						 |	      Description 		  |
+|--------------------------------------------------------|----------------------------------------|
+| `Supplementary_Material_A_Eigenvalues.R` 		 | Reproduces **Supplementary Figure A1** |
+| `Supplementary_Material_B_ODE_Simulations.jl`		 | Reproduces **Supplementary Figure B1** |
+| `Supplementary_Material_C_Simulations.jl`		 | Reproduces **Supplementary Figure C1** |
+| `Supplementary_Material_G_Eigenvalues.R` 		 | Reproduces **Supplementary Figure G1** |
+| `Supplementary_Material_G_Pairwise_Invasion.nb` 	 | Reproduces **Supplementary Figure G2** |
+| `Supplementary_Material_H_Priority_Effects_Code.R` 	 | Reproduces **Supplementary Figure H1** |
+| `Supplementary_Material_Section_I_Fig_2.nb` 		 | Reproduces **Supplementary Figure I2** |
+| `Supplementary_Materials_Section_I_Fig_3_K_1250.nb` 	 | Reproduces **Supplementary Figure I3** |
+| `Supplementary_Materials_Section_I_Fig_4_K_50.nb` 	 | Reproduces **Supplementary Figure I4** |
+| `Supplementary_Materials_Section_I_Fig_5_r_0_052.nb`	 | Reproduces **Supplementary Figure I5** |
+| `Supplementary_Materials_Section_I_Fig_6_r_1_3.nb` 	 | Reproduces **Supplementary Figure I6** |
+| `Supplementary_Materials_Section_I_Fig_7_m_0_025.nb` 	 | Reproduces **Supplementary Figure I7** |
+| `Supplementary_Materials_Section_I_Fig_8_m_0_09.nb` 	 | Reproduces **Supplementary Figure I8** |
+| `Supplementary_Materials_Section_I_Fig_9_e_0_025.nb`	 | Reproduces **Supplementary Figure I9** |
+| `Supplementary_Materials_Section_I_Fig_10_e_0_045.nb`  | Reproduces **Supplementary Figure I10**|
+
+---
+
+------------------------------------------
+Supplementary Materials Notebooks
+------------------------------------------
+
+Code to reproduce Supplementary Materials Notebooks:
+
+--------------------------------------------------------------------------------
+| Script 				 |	      Description  	       |
+|----------------------------------------|-------------------------------------|
+| `Supplementary Materials Section D.nb` | Generates content for **Section D** |
+| `Supplementary Materials Section E.nb` | Generates content for **Section E** |
+| `Supplementary Materials Section F.nb` | Generates content for **Section F** |
+| `Supplementary Materials Section G.nb` | Generates content for **Section G** |
+
+---
+
+---------------------
+Software Versions
+---------------------
+
+The code was developed and tested using:
+
+    - Mathematica: Version 13.2  
+    - R          : Version 4.3.0  
+    - Julia      : Version 1.11.1  
+
+---
